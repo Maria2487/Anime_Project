@@ -34,10 +34,10 @@ namespace InterfataUtilizator_WindowsForms
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtNume = new System.Windows.Forms.TextBox();
+            this.txtSezoane = new System.Windows.Forms.TextBox();
+            this.txtEpisoade = new System.Windows.Forms.TextBox();
+            this.txtRecenzie = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -103,33 +103,33 @@ namespace InterfataUtilizator_WindowsForms
             this.label6.TabIndex = 6;
             this.label6.Text = "Recenzie";
             // 
-            // textBox1
+            // txtNume
             // 
-            this.textBox1.Location = new System.Drawing.Point(126, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 7;
+            this.txtNume.Location = new System.Drawing.Point(126, 26);
+            this.txtNume.Name = "txtNume";
+            this.txtNume.Size = new System.Drawing.Size(100, 22);
+            this.txtNume.TabIndex = 7;
             // 
-            // textBox2
+            // txtSezoane
             // 
-            this.textBox2.Location = new System.Drawing.Point(126, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 8;
+            this.txtSezoane.Location = new System.Drawing.Point(126, 66);
+            this.txtSezoane.Name = "txtSezoane";
+            this.txtSezoane.Size = new System.Drawing.Size(100, 22);
+            this.txtSezoane.TabIndex = 8;
             // 
-            // textBox3
+            // txtEpisoade
             // 
-            this.textBox3.Location = new System.Drawing.Point(126, 106);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 9;
+            this.txtEpisoade.Location = new System.Drawing.Point(126, 106);
+            this.txtEpisoade.Name = "txtEpisoade";
+            this.txtEpisoade.Size = new System.Drawing.Size(100, 22);
+            this.txtEpisoade.TabIndex = 9;
             // 
-            // textBox6
+            // txtRecenzie
             // 
-            this.textBox6.Location = new System.Drawing.Point(126, 152);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 12;
+            this.txtRecenzie.Location = new System.Drawing.Point(126, 152);
+            this.txtRecenzie.Name = "txtRecenzie";
+            this.txtRecenzie.Size = new System.Drawing.Size(100, 22);
+            this.txtRecenzie.TabIndex = 12;
             // 
             // radioButton1
             // 
@@ -294,10 +294,10 @@ namespace InterfataUtilizator_WindowsForms
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRecenzie);
+            this.Controls.Add(this.txtEpisoade);
+            this.Controls.Add(this.txtSezoane);
+            this.Controls.Add(this.txtNume);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -324,10 +324,10 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtNume;
+        private System.Windows.Forms.TextBox txtSezoane;
+        private System.Windows.Forms.TextBox txtEpisoade;
+        private System.Windows.Forms.TextBox txtRecenzie;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;

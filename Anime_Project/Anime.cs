@@ -76,12 +76,17 @@ namespace Anime_Project
             TipulAnime = (TypeAnime)int.Parse(detalii[(int)Campuri.TIP]);
 
             GenAnime = new ArrayList();
-            
+
             GenAnime.AddRange(detalii[(int)Campuri.GENANIME].Split(SEPARATOR_SECUNDAR_FISIER));
         }
 
-       // public Anime()
-
+        public Anime(string nume, string sezoane, string episoade, string nota)
+        {
+            NumeAnime = nume;
+            SezoaneAnime = Convert.ToInt32(sezoane);
+            EpisoadeAnime = Convert.ToInt32(episoade);
+            NotaAnime = Convert.ToDouble(nota);
+        }
 
         #endregion CONSTRUCTORI
 
@@ -105,7 +110,7 @@ namespace Anime_Project
         public string ConvertToStringFisier()
         {
             string s = string.Format("{1}{0}{2}{0}{3}{0}{4}{0}{5}{0}{6}{0}{7}", 
-                SEPARATOR_PRINCIPAL_FISIER, (NumeAnime ?? " NECUNOSCUT "), (SezoaneAnime.ToString() ?? " NECUNOSCUT "), (EpisoadeAnime.ToString() ?? " NECUNOSCUT "), (int)OngoingAnime, (int)TipulAnime, GenAnime);
+                SEPARATOR_PRINCIPAL_FISIER, (NumeAnime ?? " NECUNOSCUT "), (SezoaneAnime.ToString() ?? " NECUNOSCUT "), (EpisoadeAnime.ToString() ?? " NECUNOSCUT "), (NotaAnime.ToString() ?? " NECUNOSCUT "), (int)OngoingAnime, (int)TipulAnime, GenAnime);
 
             return s;
         }
