@@ -51,4 +51,15 @@
         Completed = 2
     }
 
+    public enum Campuri
+    {
+        NUMEANIME = 0,
+        SEZOANE = 1,
+        EPISOADEANIME = 2,
+        NOTA = 3,
+        ONGOING = 4,
+        TIP = 5,
+        GENANIME = 6
+    }
+
 }

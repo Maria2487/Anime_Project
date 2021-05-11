@@ -29,7 +29,7 @@ namespace InterfataUtilizator_WindowsForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Anime anime1 = new Anime(txtNume.Text, txtPrenume.Text);
+            Anime anime1 = new Anime();
 
             if (radioButton1.Checked)
                 anime1.TipulAnime = TypeAnime.TV;
