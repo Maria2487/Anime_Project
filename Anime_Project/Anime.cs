@@ -36,7 +36,7 @@ namespace Anime_Project
 
         public Status OngoingAnime
         { get; set; }
-        public ArrayList GenAnime { get; set; }
+        public List<string> GenAnime { get; set; }
 
         public string GenAnimeAsString
         {
@@ -69,13 +69,13 @@ namespace Anime_Project
             string[] detalii = info.Split(SEPARATOR_PRINCIPAL_FISIER);
             
             NumeAnime = detalii[(int)Campuri.NUMEANIME];
-            SezoaneAnime = Convert.ToInt32(Campuri.SEZOANE);
-            EpisoadeAnime = Convert.ToInt32(Campuri.EPISOADEANIME);
-            NotaAnime = Convert.ToDouble(Campuri.NOTA);
+            SezoaneAnime = Convert.ToInt32(detalii[(int)Campuri.SEZOANE]);
+            EpisoadeAnime = Convert.ToInt32(detalii[(int)Campuri.EPISOADEANIME]);
+            NotaAnime = Convert.ToDouble(detalii[(int)Campuri.NOTA]);
             OngoingAnime = (Status)int.Parse(detalii[(int)Campuri.ONGOING]);
             TipulAnime = (TypeAnime)int.Parse(detalii[(int)Campuri.TIP]);
 
-            GenAnime = new ArrayList();
+            GenAnime = new List<string>();
 
             GenAnime.AddRange(detalii[(int)Campuri.GENANIME].Split(SEPARATOR_SECUNDAR_FISIER));
         }
@@ -90,7 +90,7 @@ namespace Anime_Project
 
         #endregion CONSTRUCTORI
 
-        #region AFISARI
+        #region Convert
 
         //public void Print()
         //{
@@ -103,19 +103,19 @@ namespace Anime_Project
 
         public string ConvertToStringAfisare()
         {
-            string s = $"Animeul: \"{NumeAnime ?? " NECUNOSCUT "}\" are: Sezoane: {SezoaneAnime}, Episoade: {EpisoadeAnime} si o nota de {NotaAnime} \n Statusul:  {OngoingAnime}, Tipul: {TipulAnime}, Gen/Genuri: {GenAnimeAsString}";
+            string s = $"* Animeul: \"{NumeAnime ?? " NECUNOSCUT "}\" are: Sezoane: {SezoaneAnime}, Episoade: {EpisoadeAnime} si o nota de {NotaAnime} Statusul:  {OngoingAnime}, Tipul: {TipulAnime}, Gen/Genuri: {GenAnimeAsString}";
             return s;
         }
 
         public string ConvertToStringFisier()
         {
             string s = string.Format("{1}{0}{2}{0}{3}{0}{4}{0}{5}{0}{6}{0}{7}", 
-                SEPARATOR_PRINCIPAL_FISIER, (NumeAnime ?? " NECUNOSCUT "), (SezoaneAnime.ToString() ?? " NECUNOSCUT "), (EpisoadeAnime.ToString() ?? " NECUNOSCUT "), (NotaAnime.ToString() ?? " NECUNOSCUT "), (int)OngoingAnime, (int)TipulAnime, GenAnime);
+                SEPARATOR_PRINCIPAL_FISIER, (NumeAnime ?? " NECUNOSCUT "), (SezoaneAnime.ToString() ?? " NECUNOSCUT "), (EpisoadeAnime.ToString() ?? " NECUNOSCUT "), (NotaAnime.ToString() ?? " NECUNOSCUT "), (int)OngoingAnime, (int)TipulAnime, GenAnimeAsString);
 
             return s;
         }
 
-        #endregion AFISARI
+        #endregion Convert
 
 
     }

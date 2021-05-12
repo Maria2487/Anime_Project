@@ -66,7 +66,36 @@ namespace NivelAccesDate
 
             return animeuri;
         }
+        //public List<Anime> GetAnimeuri()
+        //{
+        //    List < Anime > animeuri = new List<Anime>();
 
+        //    try
+        //    {
+        //        // instructiunea 'using' va apela sr.Close()
+        //        using (StreamReader sr = new StreamReader(NumeFisier))
+        //        {
+        //            string line;
+
+        //            //citeste cate o linie si creaza un obiect de tip Student pe baza datelor din linia citita
+        //            while ((line = sr.ReadLine()) != null)
+        //            {
+        //                Anime animeDinFisier = new Anime(line);
+        //                animeuri.Add(animeDinFisier);
+        //            }
+        //        }
+        //    }
+        //    catch (IOException eIO)
+        //    {
+        //        throw new Exception("Eroare la deschiderea fisierului. Mesaj: " + eIO.Message);
+        //    }
+        //    catch (Exception eGen)
+        //    {
+        //        throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
+        //    }
+
+        //    return animeuri;
+        //}
         public Anime GetAnime(string nume)
         {
             try
