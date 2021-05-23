@@ -10,9 +10,10 @@ namespace NivelAccesDate
 
         bool RewriteAnime(Anime animeUpdate);
 
-        ArrayList GetAnimeuri();
+        List<Anime> GetAnimeuri();
 
         Anime GetAnime(string nume);
+        Anime GetAnime(int IdAnime);
 
         //List<Anime> ModificareAnime(ArrayList animeuri);
     }

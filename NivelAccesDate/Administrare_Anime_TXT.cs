@@ -8,6 +8,8 @@ namespace NivelAccesDate
 {
     public class Administrare_Anime_TXT : IStocareDate
     {
+        private const int ID_ANIME = 1;
+        private const int INCREMENT = 1;
         private string NumeFisier { get; set; }
 
         public Administrare_Anime_TXT(string numeFisier)
@@ -19,6 +21,7 @@ namespace NivelAccesDate
 
         public void AddAnime(Anime a)
         {
+            a.IdAnime = GetId();
             try
             {
                 using (StreamWriter swFisierText = new StreamWriter(NumeFisier, true))
@@ -36,9 +39,10 @@ namespace NivelAccesDate
             }
         }
 
-        public ArrayList GetAnimeuri()
+       
+        public List<Anime> GetAnimeuri()
         {
-            ArrayList animeuri = new ArrayList();
+            List<Anime> animeuri = new List<Anime>();
 
             try
             {
@@ -66,36 +70,6 @@ namespace NivelAccesDate
 
             return animeuri;
         }
-        //public List<Anime> GetAnimeuri()
-        //{
-        //    List < Anime > animeuri = new List<Anime>();
-
-        //    try
-        //    {
-        //        // instructiunea 'using' va apela sr.Close()
-        //        using (StreamReader sr = new StreamReader(NumeFisier))
-        //        {
-        //            string line;
-
-        //            //citeste cate o linie si creaza un obiect de tip Student pe baza datelor din linia citita
-        //            while ((line = sr.ReadLine()) != null)
-        //            {
-        //                Anime animeDinFisier = new Anime(line);
-        //                animeuri.Add(animeDinFisier);
-        //            }
-        //        }
-        //    }
-        //    catch (IOException eIO)
-        //    {
-        //        throw new Exception("Eroare la deschiderea fisierului. Mesaj: " + eIO.Message);
-        //    }
-        //    catch (Exception eGen)
-        //    {
-        //        throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
-        //    }
-
-        //    return animeuri;
-        //}
         public Anime GetAnime(string nume)
         {
             try
@@ -124,9 +98,40 @@ namespace NivelAccesDate
             return null;
         }
 
+        public Anime GetAnime(int IdAnime)
+        {
+            try
+            {
+                // instructiunea 'using' va apela sr.Close()
+                using (StreamReader sr = new StreamReader(NumeFisier))
+                {
+                    string linieDinFisier;
+
+                    //citeste cate o linie si creaza un obiect de tip Student pe baza datelor din linia citita
+                    while ((linieDinFisier = sr.ReadLine()) != null)
+                    {
+                        Anime anime = new Anime(linieDinFisier);
+                        if (anime.IdAnime == IdAnime)
+                        {
+                            return anime;
+                        }
+                    }
+                }
+            }
+            catch (IOException eIO)
+            {
+                throw new Exception("Eroare la deschiderea fisierului. Mesaj: " + eIO.Message);
+            }
+            catch (Exception eGen)
+            {
+                throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
+            }
+            return null;
+        }
+
         public bool RewriteAnime(Anime animeUpdate)
         {
-            ArrayList anime = GetAnimeuri();
+            List<Anime> anime = GetAnimeuri();
             bool actualizareCuSucces = false;
             try
             {
@@ -157,129 +162,41 @@ namespace NivelAccesDate
             return actualizareCuSucces;
         }
 
+        private int GetId()
+        {
+            int IdAnime1 = ID_ANIME;
+            try
+            {
+                // instructiunea 'using' va apela sr.Close()
+                using (StreamReader sr = new StreamReader(NumeFisier))
+                {
+                    string LinieDinFisier;
+                    Anime ultimulAnimeDinFisier = null;
 
+                    //citeste cate o linie si creaza un obiect de tip Student pe baza datelor din linia citita
+                    while ((LinieDinFisier = sr.ReadLine()) != null)
+                    {
+                        ultimulAnimeDinFisier= new Anime(LinieDinFisier);
+                    }
 
-        //public List<Anime> ModificareAnime(ArrayList animeuri)
-        //{
-        //    List<Anime> listaAnime = new List<Anime>();
-        //    foreach (var elem in animeuri)
-        //    {
-        //        listaAnime.Add((Anime)elem);
-        //    }
+                    if (ultimulAnimeDinFisier != null)
+                    {
+                        IdAnime1 = ultimulAnimeDinFisier.IdAnime + INCREMENT;
+                    }
+                }
+            }
+            catch (IOException eIO)
+            {
+                throw new Exception("Eroare la deschiderea fisierului. Mesaj: " + eIO.Message);
+            }
+            catch (Exception eGen)
+            {
+                throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
+            }
+            return IdAnime1;
+        }
 
-        //    string caut;
-        //    Console.Write("Introduceti numele animeului: ");
-        //    caut = Console.ReadLine().ToUpper().Trim();
-        //    int i = -1;
-        //    bool ok = false;
-        //    foreach (var elem in listaAnime)
-        //    {
-        //        i++;
-        //        if (caut == elem.NumeAnime)
-        //        {
-        //            ok = true;
-        //            break;
-        //        }
-        //    }
-
-        //    if (ok == false)
-        //    {
-        //        Console.WriteLine("Nu exista acest anime");
-        //        return listaAnime;
-        //    }
-
-        //    bool modificaDate = false;
-        //    bool isTrue = true;
-
-        //    while (isTrue)
-        //    {
-        //        Console.WriteLine("Doriti sa modificati acest anime? [Y/N]");
-        //        var key = Console.ReadKey(true).Key;
-        //        switch (key)
-        //        {
-        //            case ConsoleKey.Y:
-        //                modificaDate = true;
-        //                isTrue = false;
-        //                break;
-
-        //            case ConsoleKey.N:
-        //                modificaDate = false;
-        //                isTrue = false;
-        //                break;
-
-        //            default:
-        //                Console.WriteLine("Optiune incorecta.");
-        //                break;
-        //        }
-        //        if (isTrue)
-        //        {
-        //            Console.WriteLine("\nApasati orice tasta pentru a continua...");
-        //            Console.ReadKey();
-        //        }
-        //    }
-        //    Console.Clear();
-
-        //    if (modificaDate)
-        //    {
-        //        int intParseInput;
-        //        Double doubleParseInput;
-        //        while (true)
-        //        {
-        //            Console.Clear();
-        //            Console.WriteLine(listaAnime[i].ConvertToStringAfisare());
-        //            Console.WriteLine("Ce doriti sa modificati?\n ");
-        //            Console.WriteLine("1 - Numarul de episoade\n");
-        //            Console.WriteLine("2 - Numarul de sezoane\n");
-        //            Console.WriteLine("3 - Starea animeului\n");
-        //            Console.WriteLine("4 - Recenzia animeului\n");
-        //            Console.WriteLine("X - Pentru a incheia aceata activitate\n\n");
-
-        //            var key = Console.ReadKey(true).Key;
-        //            switch (key)
-        //            {
-        //                case ConsoleKey.D1:
-        //                    Console.Write("Introduceti numarul de episoade: ");
-        //                    if (int.TryParse(Console.ReadLine(), out intParseInput))
-        //                        listaAnime[i].EpisoadeAnime = intParseInput;
-        //                    else
-        //                        Console.WriteLine("Introducere incorecta");
-        //                    break;
-
-        //                case ConsoleKey.D2:
-        //                    Console.Write("Introduceti numarul de sezoane: ");
-        //                    if (int.TryParse(Console.ReadLine(), out intParseInput))
-        //                        listaAnime[i].SezoaneAnime = intParseInput;
-        //                    else
-        //                        Console.WriteLine("Introducere incorecta");
-        //                    break;
-
-        //                case ConsoleKey.D3:
-        //                    Console.WriteLine("Introduceti starea animeului: ");
-        //                    listaAnime[i].OngoingAnime = Console.ReadLine().ToUpper().Trim();
-        //                    break;
-
-        //                case ConsoleKey.D4:
-        //                    Console.Write("Introduceti nota: ");
-        //                    if (double.TryParse(Console.ReadLine(), out doubleParseInput))
-        //                        listaAnime[i].NotaAnime = doubleParseInput;
-        //                    else
-        //                        Console.WriteLine("Introducere incorecta");
-        //                    break;
-
-        //                case ConsoleKey.X:
-        //                    return listaAnime;
-
-        //                default:
-        //                    break;
-        //            }
-        //        }
-        //    }
-
-        //    return listaAnime;
-        //}
-
-
-
+       
         #region ALTELE
 
         public static string ComparatieNote(Anime a1, Anime a2)

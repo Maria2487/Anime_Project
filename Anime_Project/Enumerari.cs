@@ -53,13 +53,14 @@
 
     public enum Campuri
     {
-        NUMEANIME = 0,
-        SEZOANE = 1,
-        EPISOADEANIME = 2,
-        NOTA = 3,
-        ONGOING = 4,
-        TIP = 5,
-        GENANIME = 6
+        IDANIME = 0,
+        NUMEANIME = 1,
+        SEZOANE = 2,
+        EPISOADEANIME = 3,
+        NOTA = 4,
+        ONGOING = 5,
+        TIP = 6,
+        GENANIME = 7
     }
 
 }

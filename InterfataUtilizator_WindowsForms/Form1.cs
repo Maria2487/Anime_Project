@@ -15,11 +15,12 @@ namespace InterfataUtilizator_WindowsForms
 {
     public partial class Form1 : Form
     {
-        IStocareDate adminAnime = StocareFactory.GetAdministratorStocare();
+        IStocareDate adminAnime;
         List<string> genurileBifate = new List<string>();
         public Form1()
         {
             InitializeComponent();
+            adminAnime = StocareFactory.GetAdministratorStocare();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,8 +30,12 @@ namespace InterfataUtilizator_WindowsForms
 
         private void button1_Click(object sender, EventArgs e) //Adaugare - anime
         {
-            
 
+            if (DateValide() == false)
+            {
+                return;
+            }
+                
             Anime anime1 = new Anime(txtNume.Text,txtSezoane.Text,txtEpisoade.Text, txtRecenzie.Text);
 
             TypeAnime? typeAnime = GetTypeAnime();
@@ -47,7 +52,7 @@ namespace InterfataUtilizator_WindowsForms
             anime1.GenAnime = new List<string>();
             anime1.GenAnime.AddRange(genurileBifate);
 
-            richTextBox1.Text = "Animeul:  " + anime1.ConvertToStringAfisare() + "A fost adaugat";
+            ListaAnime.Text = "Animeul:  " + anime1.ConvertToStringAfisare() + "A fost adaugat";
             adminAnime.AddAnime(anime1);
 
             ResetareControale();
@@ -55,24 +60,24 @@ namespace InterfataUtilizator_WindowsForms
 
         private TypeAnime? GetTypeAnime()
         {
-            if (radioButton1.Checked)
+            if (radioButtonTV.Checked)
                 return TypeAnime.TV;
-            if (radioButton2.Checked)
+            if (radioButtonOVA.Checked)
                 return TypeAnime.OVA;
-            if (radioButton3.Checked)
+            if (radioButtonmMOVIE.Checked)
                 return TypeAnime.MOVIE;
-            if (radioButton4.Checked)
+            if (radioButtonSPECIAL.Checked)
                 return TypeAnime.SPECIAL;
-            if (radioButton5.Checked)
+            if (radioButtonONA.Checked)
                 return TypeAnime.ONA;
             return null;
         }
 
         private Status? GetStatus()
         {
-            if (radioButton6.Checked)
+            if (radioButtonAiring.Checked)
                 return Status.AIRING;
-            if (radioButton7.Checked)
+            if (radioButtonCompleted.Checked)
                 return Status.COMPLETED;
 
             return null;
@@ -90,30 +95,198 @@ namespace InterfataUtilizator_WindowsForms
 
         private void button2_Click(object sender, EventArgs e) //Afisare
         {
-            richTextBox1.Clear();
+            ListaAnime.Items.Clear();
+            ListaAnime.Items.Add("Lista Animeuri");
             foreach (Anime a in adminAnime.GetAnimeuri())
             {
-                richTextBox1.AppendText(a.ConvertToStringAfisare());
-                richTextBox1.AppendText(Environment.NewLine);
+                ListaAnime.Items.Add(a.ConvertToStringAfisare());
+            }
+        }
+
+        private void show()
+        {
+            ListaAnime.Items.Clear();
+            ListaAnime.Items.Add("Lista Animeuri");
+            foreach (Anime a in adminAnime.GetAnimeuri())
+            {
+                ListaAnime.Items.Add(a.ConvertToStringAfisare());
             }
         }
 
         private void ResetareControale()
         {
             txtNume.Text = txtSezoane.Text = txtEpisoade.Text = txtRecenzie.Text = string.Empty;
-            radioButton1.Checked = false;
-            radioButton2.Checked = false;
-            radioButton3.Checked = false;
-            radioButton4.Checked = false;
-            radioButton5.Checked = false;
-            radioButton6.Checked = false;
-            radioButton7.Checked = false;
-            checkBox1.Checked = false;
-            checkBox2.Checked = false;
-            checkBox3.Checked = false;
-            checkBox4.Checked = false;
+            radioButtonTV.Checked = false;
+            radioButtonOVA.Checked = false;
+            radioButtonmMOVIE.Checked = false;
+            radioButtonSPECIAL.Checked = false;
+            radioButtonONA.Checked = false;
+            radioButtonAiring.Checked = false;
+            radioButtonCompleted.Checked = false;
+            checkBoxAction.Checked = false;
+            checkBoxComedy.Checked = false;
+            checkBoxMecha.Checked = false;
+            checkBoxShounenAi.Checked = false;
+            checkBoxAdventure.Checked = false;
+            checkBoxComedy.Checked = false;
+            checkBoxDemons.Checked = false;
+            checkBoxDrama.Checked = false;
+            checkBoxEcchi.Checked = false;
+            checkBoxFantasy.Checked = false;
+            checkBoxGame.Checked = false;
+            checkBoxHarem.Checked = false;
+            checkBoxHistorical.Checked = false;
+            checkBoxHorror.Checked = false;
+            checkBoxJosei.Checked = false;
+            checkBoxMagic.Checked = false;
+            checkBoxMartial.Checked = false;
+            checkBoxMilitary.Checked = false;
+            checkBoxMusic.Checked = false;
+            checkBoxMystery.Checked = false;
+            checkBoxPsyhological.Checked = false;
+            checkBoxRomance.Checked = false;
+            checkBoxSamurai.Checked = false;
+            checkBoxSeinen.Checked = false;
+            checkBoxShojo.Checked = false;
+            checkBoxShojoai.Checked = false;
+            checkBoxShounen.Checked = false;
+            checkBoxSliceoflife.Checked = false;
+            checkBoxSports.Checked = false;
+            checkBoxSupernatural.Checked = false;
+            checkBoxThriller.Checked = false;
+            checkBoxYaoi.Checked = false;
+            checkBoxYuri.Checked = false;
+            //lblSezoane.ForeColor = Color.Black;
+            //lblEpisoade.ForeColor = Color.Black;
+            //lblRecenzie.ForeColor = Color.Black;
+            //groupBoxGenuri.ForeColor = Color.Black;
             genurileBifate.Clear();
-            richTextBox1.Text = string.Empty;
+            ListaAnime.Text = string.Empty;
+        }
+
+        private bool DateValide()
+        {
+            if (genurileBifate.Count == 0)
+            {
+                groupBoxGenuri.ForeColor = Color.Red;
+                return false;
+            }
+            else
+                groupBoxGenuri.ForeColor = Color.Black;
+            int input,ok = 1;
+            if (int.TryParse(txtSezoane.Text, out input))
+            {
+                if (input <= 0)
+                {
+                    lblSezoane.ForeColor = Color.Red;
+                    txtSezoane.Clear();
+                    ok = 0;
+                    return false;
+                }
+                    
+            }
+            else
+            {
+                lblSezoane.ForeColor = Color.Red;
+                txtSezoane.Clear();
+                ok = 0;
+                return false;
+            }
+            if(ok == 1)
+                lblSezoane.ForeColor = Color.Black;
+
+            ok = 1;
+            if (int.TryParse(txtEpisoade.Text, out input))
+            {
+                if (input <= 0)
+                {
+                    lblEpisoade.ForeColor = Color.Red;
+                    txtEpisoade.Clear();
+                    ok = 0;
+                    return false;
+                }
+                if (input > 0)
+                {
+                    if (int.TryParse(txtSezoane.Text, out input))
+                    {
+                        if (input <= 0)
+                        {
+                            lblSezoane.ForeColor = Color.Red;
+                            txtSezoane.Clear();
+                            ok = 0;
+                            return false;
+                        }
+
+                    }
+                    else
+                    {
+                        lblSezoane.ForeColor = Color.Red;
+                        txtSezoane.Clear();
+                        ok = 0;
+                        return false;
+                    }
+                }
+
+            }
+            else
+            {
+                lblEpisoade.ForeColor = Color.Red;
+                txtEpisoade.Clear();
+                ok = 0;
+                return false;
+            }
+            if (ok == 1)
+                lblEpisoade.ForeColor = Color.Black;
+
+            ok = 1;
+            if (int.TryParse(txtRecenzie.Text, out input))
+            {
+                if (input < 0)
+                {
+                    lblRecenzie.ForeColor = Color.Red;
+                    txtRecenzie.Clear();
+                    ok = 0;
+                    return false;
+                }
+
+            }
+            else
+            {
+                lblRecenzie.ForeColor = Color.Red;
+                txtRecenzie.Clear();
+                ok = 0;
+                return false;
+            }
+            if (ok == 1)
+                lblRecenzie.ForeColor = Color.Black;
+          
+            return true;
+
+        }
+
+        private void buttonModificare_Click(object sender, EventArgs e)
+        {
+            Anime a = adminAnime.GetAnime(ListaAnime.SelectedIndex);
+
+            a.NumeAnime = txtNume.Text;
+            a.NotaAnime = Convert.ToDouble(txtRecenzie.Text);
+            a.SezoaneAnime = Convert.ToInt32(txtSezoane.Text);
+            a.EpisoadeAnime = Convert.ToInt32(txtEpisoade.Text);
+            adminAnime.RewriteAnime(a);
+
+            lblMesaj.Text = "Animeul a fost modificat.";
+
+            show();
+            ResetareControale();
+        }
+
+        private void ListaAnime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Anime a = adminAnime.GetAnime(ListaAnime.SelectedIndex);
+            txtNume.Text = a.NumeAnime;
+            txtSezoane.Text = a.SezoaneAnime.ToString();
+            txtEpisoade.Text = a.EpisoadeAnime.ToString();
+            txtRecenzie.Text = a.NotaAnime.ToString();
         }
     }
 }
