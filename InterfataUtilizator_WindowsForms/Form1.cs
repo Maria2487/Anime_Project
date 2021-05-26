@@ -38,7 +38,7 @@ namespace InterfataUtilizator_WindowsForms
                 return;
             }
 
-            Anime anime1 = new Anime(txtNume.Text, txtSezoane.Text, txtEpisoade.Text, txtRecenzie.Text);
+            Anime anime1 = new Anime(txtNume1.Text, txtSezoane.Text, txtEpisoade.Text, txtRecenzie.Text);
 
             TypeAnime? typeAnime = GetTypeAnime();
             if(typeAnime.HasValue)
@@ -105,8 +105,8 @@ namespace InterfataUtilizator_WindowsForms
             {
                 ListaAnime.Items.Add(a.ConvertToStringAfisare());
             }
-            dataGridAnime.DataSource = null;
-            dataGridAnime.DataSource = adminAnime.GetAnimeuri();
+            //dataGridAnime.DataSource = null;
+            //dataGridAnime.DataSource = adminAnime.GetAnimeuri();
         }
 
         private void show()
@@ -117,13 +117,13 @@ namespace InterfataUtilizator_WindowsForms
             {
                 ListaAnime.Items.Add(a.ConvertToStringAfisare());
             }
-            dataGridAnime.DataSource = null;
-            dataGridAnime.DataSource = adminAnime.GetAnimeuri();
+            //dataGridAnime.DataSource = null;
+            //dataGridAnime.DataSource = adminAnime.GetAnimeuri();
         }
 
         private void ResetareControale()
         {
-            txtNume.Text = txtSezoane.Text = txtEpisoade.Text = txtRecenzie.Text = string.Empty;
+            txtNume1.Text = txtSezoane.Text = txtEpisoade.Text = txtRecenzie.Text = string.Empty;
             radioButtonTV.Checked = false;
             radioButtonOVA.Checked = false;
             radioButtonmMOVIE.Checked = false;
@@ -278,7 +278,8 @@ namespace InterfataUtilizator_WindowsForms
                 return;
             }
 
-            a.NumeAnime = txtNume.Text;
+            a.NumeAnime = txtNume1.Text;
+            
             a.NotaAnime = Convert.ToDouble(txtRecenzie.Text);
             a.SezoaneAnime = Convert.ToInt32(txtSezoane.Text);
             a.EpisoadeAnime = Convert.ToInt32(txtEpisoade.Text);
@@ -297,6 +298,7 @@ namespace InterfataUtilizator_WindowsForms
             a.GenAnime = new List<string>();
             a.GenAnime.AddRange(genurileBifate);
             adminAnime.RewriteAnime(a);
+            
             //if(adminAnime.RewriteAnime(a))
             //{
             //    lblMesaje.Text = "Animeul a fost modificat.";
@@ -305,7 +307,7 @@ namespace InterfataUtilizator_WindowsForms
             //{
             //    lblMesaje.Text = "Animeul nu s-a putut modifica.";
             //}
-            
+
 
             show();
             ResetareControale();
@@ -315,7 +317,7 @@ namespace InterfataUtilizator_WindowsForms
         {
             ResetareControale();
             Anime a = adminAnime.GetAnime(ListaAnime.SelectedIndex);
-            txtNume.Text = a.NumeAnime;
+            txtNume1.Text = a.NumeAnime;
             txtSezoane.Text = a.SezoaneAnime.ToString();
             txtEpisoade.Text = a.EpisoadeAnime.ToString();
             txtRecenzie.Text = a.NotaAnime.ToString();
@@ -357,13 +359,12 @@ namespace InterfataUtilizator_WindowsForms
 
         private void buttonCautare_Click(object sender, EventArgs e)
         {
-            ListaAnime.Items.Clear();
-            ListaAnime.Items.Add("Lista Animeuri:");
-            Anime a = adminAnime.GetAnime(txtNume.Text);
-            if (a == null)
-                ListaAnime.Items.Add("Animeul nu a fost gasit");
-            else
-                ListaAnime.Items.Add(a.ConvertToStringAfisare());
+            Form2 fr2 = new Form2();
+            this.Hide();
+            fr2.Show();
+
+            ResetareControale();
+
         }
 
         private void buttonStergere_Click(object sender, EventArgs e)

@@ -129,6 +129,41 @@ namespace NivelAccesDate
             return null;
         }
 
+        public List<Anime> GetAnimeL(string nume)
+        {
+            List<Anime> animeuri = new List<Anime>();
+
+            try
+            {
+                // instructiunea 'using' va apela sr.Close()
+                using (StreamReader sr = new StreamReader(NumeFisier))
+                {
+                    string line;
+
+                    //citeste cate o linie si creaza un obiect de tip Student pe baza datelor din linia citita
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        Anime animeDinFisier = new Anime(line);
+                        if (nume.ToUpper() == animeDinFisier.NumeAnime.ToUpper())
+                        {
+                            animeuri.Add(animeDinFisier);
+                            return animeuri;
+                        }
+                    }
+                }
+            }
+            catch (IOException eIO)
+            {
+                throw new Exception("Eroare la deschiderea fisierului. Mesaj: " + eIO.Message);
+            }
+            catch (Exception eGen)
+            {
+                throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
+            }
+
+            return null;
+        }
+
         public bool RewriteAnime(Anime animeUpdate)
         {
             List<Anime> anime = GetAnimeuri();
@@ -141,7 +176,7 @@ namespace NivelAccesDate
                     {
                         Anime animeFisier = animeCaut;
                        
-                        if (animeCaut.NumeAnime == animeUpdate.NumeAnime)
+                        if (animeCaut.IdAnime == animeUpdate.IdAnime)
                         {
                             animeFisier = animeUpdate;
                         }

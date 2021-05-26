@@ -29,12 +29,10 @@ namespace InterfataUtilizator_WindowsForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonAdauga = new System.Windows.Forms.Button();
-            this.lblNume = new System.Windows.Forms.Label();
+            this.lblNume1 = new System.Windows.Forms.Label();
             this.lblSezoane = new System.Windows.Forms.Label();
             this.lblEpisoade = new System.Windows.Forms.Label();
             this.lblRecenzie = new System.Windows.Forms.Label();
-            this.txtNume = new System.Windows.Forms.TextBox();
             this.txtSezoane = new System.Windows.Forms.TextBox();
             this.txtEpisoade = new System.Windows.Forms.TextBox();
             this.txtRecenzie = new System.Windows.Forms.TextBox();
@@ -80,42 +78,34 @@ namespace InterfataUtilizator_WindowsForms
             this.checkBoxHorror = new System.Windows.Forms.CheckBox();
             this.checkBoxHistorical = new System.Windows.Forms.CheckBox();
             this.checkBoxAdventure = new System.Windows.Forms.CheckBox();
-            this.buttonAfisare = new System.Windows.Forms.Button();
-            this.buttonCautare = new System.Windows.Forms.Button();
-            this.buttonModificare = new System.Windows.Forms.Button();
             this.ListaAnime = new System.Windows.Forms.ListBox();
-            this.dataGridAnime = new System.Windows.Forms.DataGridView();
-            this.buttonStergere = new System.Windows.Forms.Button();
             this.lblMesaje = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.adaugareAnimeNouToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificareAnimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cautareaUnuiAnimeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.stergereaUnuiAnimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.afisareaListeiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtNume1 = new System.Windows.Forms.TextBox();
             this.groupBoxType.SuspendLayout();
             this.groupBoxStatus.SuspendLayout();
             this.groupBoxGenuri.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAnime)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonAdauga
+            // lblNume1
             // 
-            this.buttonAdauga.Location = new System.Drawing.Point(37, 497);
-            this.buttonAdauga.Name = "buttonAdauga";
-            this.buttonAdauga.Size = new System.Drawing.Size(127, 30);
-            this.buttonAdauga.TabIndex = 0;
-            this.buttonAdauga.Text = "Adauga";
-            this.buttonAdauga.UseVisualStyleBackColor = true;
-            this.buttonAdauga.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // lblNume
-            // 
-            this.lblNume.AutoSize = true;
-            this.lblNume.Location = new System.Drawing.Point(16, 26);
-            this.lblNume.Name = "lblNume";
-            this.lblNume.Size = new System.Drawing.Size(47, 17);
-            this.lblNume.TabIndex = 1;
-            this.lblNume.Text = "NAME";
+            this.lblNume1.AutoSize = true;
+            this.lblNume1.Location = new System.Drawing.Point(22, 81);
+            this.lblNume1.Name = "lblNume1";
+            this.lblNume1.Size = new System.Drawing.Size(47, 17);
+            this.lblNume1.TabIndex = 1;
+            this.lblNume1.Text = "NAME";
             // 
             // lblSezoane
             // 
             this.lblSezoane.AutoSize = true;
-            this.lblSezoane.Location = new System.Drawing.Point(16, 66);
+            this.lblSezoane.Location = new System.Drawing.Point(22, 142);
             this.lblSezoane.Name = "lblSezoane";
             this.lblSezoane.Size = new System.Drawing.Size(74, 17);
             this.lblSezoane.TabIndex = 2;
@@ -124,7 +114,7 @@ namespace InterfataUtilizator_WindowsForms
             // lblEpisoade
             // 
             this.lblEpisoade.AutoSize = true;
-            this.lblEpisoade.Location = new System.Drawing.Point(16, 106);
+            this.lblEpisoade.Location = new System.Drawing.Point(22, 196);
             this.lblEpisoade.Name = "lblEpisoade";
             this.lblEpisoade.Size = new System.Drawing.Size(77, 17);
             this.lblEpisoade.TabIndex = 3;
@@ -133,36 +123,29 @@ namespace InterfataUtilizator_WindowsForms
             // lblRecenzie
             // 
             this.lblRecenzie.AutoSize = true;
-            this.lblRecenzie.Location = new System.Drawing.Point(12, 152);
+            this.lblRecenzie.Location = new System.Drawing.Point(22, 243);
             this.lblRecenzie.Name = "lblRecenzie";
             this.lblRecenzie.Size = new System.Drawing.Size(56, 17);
             this.lblRecenzie.TabIndex = 6;
             this.lblRecenzie.Text = "SCORE";
             // 
-            // txtNume
-            // 
-            this.txtNume.Location = new System.Drawing.Point(126, 26);
-            this.txtNume.Name = "txtNume";
-            this.txtNume.Size = new System.Drawing.Size(100, 22);
-            this.txtNume.TabIndex = 7;
-            // 
             // txtSezoane
             // 
-            this.txtSezoane.Location = new System.Drawing.Point(126, 66);
+            this.txtSezoane.Location = new System.Drawing.Point(115, 137);
             this.txtSezoane.Name = "txtSezoane";
             this.txtSezoane.Size = new System.Drawing.Size(100, 22);
             this.txtSezoane.TabIndex = 8;
             // 
             // txtEpisoade
             // 
-            this.txtEpisoade.Location = new System.Drawing.Point(126, 106);
+            this.txtEpisoade.Location = new System.Drawing.Point(115, 191);
             this.txtEpisoade.Name = "txtEpisoade";
             this.txtEpisoade.Size = new System.Drawing.Size(100, 22);
             this.txtEpisoade.TabIndex = 9;
             // 
             // txtRecenzie
             // 
-            this.txtRecenzie.Location = new System.Drawing.Point(126, 152);
+            this.txtRecenzie.Location = new System.Drawing.Point(115, 245);
             this.txtRecenzie.Name = "txtRecenzie";
             this.txtRecenzie.Size = new System.Drawing.Size(100, 22);
             this.txtRecenzie.TabIndex = 12;
@@ -229,7 +212,7 @@ namespace InterfataUtilizator_WindowsForms
             this.groupBoxType.Controls.Add(this.radioButtonONA);
             this.groupBoxType.Controls.Add(this.radioButtonOVA);
             this.groupBoxType.Controls.Add(this.radioButtonmMOVIE);
-            this.groupBoxType.Location = new System.Drawing.Point(19, 325);
+            this.groupBoxType.Location = new System.Drawing.Point(27, 412);
             this.groupBoxType.Name = "groupBoxType";
             this.groupBoxType.Size = new System.Drawing.Size(188, 113);
             this.groupBoxType.TabIndex = 18;
@@ -240,7 +223,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.groupBoxStatus.Controls.Add(this.radioButtonCompleted);
             this.groupBoxStatus.Controls.Add(this.radioButtonAiring);
-            this.groupBoxStatus.Location = new System.Drawing.Point(19, 206);
+            this.groupBoxStatus.Location = new System.Drawing.Point(27, 298);
             this.groupBoxStatus.Name = "groupBoxStatus";
             this.groupBoxStatus.Size = new System.Drawing.Size(188, 100);
             this.groupBoxStatus.TabIndex = 19;
@@ -347,7 +330,7 @@ namespace InterfataUtilizator_WindowsForms
             this.groupBoxGenuri.Controls.Add(this.checkBoxShounenAi);
             this.groupBoxGenuri.Controls.Add(this.checkBoxComedy);
             this.groupBoxGenuri.Controls.Add(this.checkBoxMecha);
-            this.groupBoxGenuri.Location = new System.Drawing.Point(260, 12);
+            this.groupBoxGenuri.Location = new System.Drawing.Point(238, 60);
             this.groupBoxGenuri.Name = "groupBoxGenuri";
             this.groupBoxGenuri.Size = new System.Drawing.Size(273, 465);
             this.groupBoxGenuri.TabIndex = 24;
@@ -662,99 +645,102 @@ namespace InterfataUtilizator_WindowsForms
             this.checkBoxAdventure.UseVisualStyleBackColor = true;
             this.checkBoxAdventure.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // buttonAfisare
-            // 
-            this.buttonAfisare.Location = new System.Drawing.Point(37, 461);
-            this.buttonAfisare.Name = "buttonAfisare";
-            this.buttonAfisare.Size = new System.Drawing.Size(127, 30);
-            this.buttonAfisare.TabIndex = 25;
-            this.buttonAfisare.Text = "Afisare";
-            this.buttonAfisare.UseVisualStyleBackColor = true;
-            this.buttonAfisare.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // buttonCautare
-            // 
-            this.buttonCautare.Location = new System.Drawing.Point(37, 533);
-            this.buttonCautare.Name = "buttonCautare";
-            this.buttonCautare.Size = new System.Drawing.Size(127, 30);
-            this.buttonCautare.TabIndex = 26;
-            this.buttonCautare.Text = "Cautare";
-            this.buttonCautare.UseVisualStyleBackColor = true;
-            this.buttonCautare.Click += new System.EventHandler(this.buttonCautare_Click);
-            // 
-            // buttonModificare
-            // 
-            this.buttonModificare.Location = new System.Drawing.Point(37, 569);
-            this.buttonModificare.Name = "buttonModificare";
-            this.buttonModificare.Size = new System.Drawing.Size(127, 30);
-            this.buttonModificare.TabIndex = 27;
-            this.buttonModificare.Text = "Modificare";
-            this.buttonModificare.UseVisualStyleBackColor = true;
-            this.buttonModificare.Click += new System.EventHandler(this.buttonModificare_Click);
-            // 
             // ListaAnime
             // 
             this.ListaAnime.FormattingEnabled = true;
             this.ListaAnime.ItemHeight = 16;
-            this.ListaAnime.Location = new System.Drawing.Point(549, 26);
+            this.ListaAnime.Location = new System.Drawing.Point(530, 63);
             this.ListaAnime.Name = "ListaAnime";
-            this.ListaAnime.Size = new System.Drawing.Size(720, 260);
+            this.ListaAnime.Size = new System.Drawing.Size(851, 452);
             this.ListaAnime.TabIndex = 30;
             this.ListaAnime.SelectedIndexChanged += new System.EventHandler(this.ListaAnime_SelectedIndexChanged);
-            // 
-            // dataGridAnime
-            // 
-            this.dataGridAnime.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAnime.Location = new System.Drawing.Point(549, 325);
-            this.dataGridAnime.Name = "dataGridAnime";
-            this.dataGridAnime.RowHeadersWidth = 51;
-            this.dataGridAnime.RowTemplate.Height = 24;
-            this.dataGridAnime.Size = new System.Drawing.Size(720, 246);
-            this.dataGridAnime.TabIndex = 34;
-            // 
-            // buttonStergere
-            // 
-            this.buttonStergere.Location = new System.Drawing.Point(37, 605);
-            this.buttonStergere.Name = "buttonStergere";
-            this.buttonStergere.Size = new System.Drawing.Size(127, 30);
-            this.buttonStergere.TabIndex = 35;
-            this.buttonStergere.Text = "Stergere";
-            this.buttonStergere.UseVisualStyleBackColor = true;
-            this.buttonStergere.Click += new System.EventHandler(this.buttonStergere_Click);
             // 
             // lblMesaje
             // 
             this.lblMesaje.AutoSize = true;
-            this.lblMesaje.Location = new System.Drawing.Point(207, 554);
+            this.lblMesaje.Location = new System.Drawing.Point(30, 592);
             this.lblMesaje.Name = "lblMesaje";
             this.lblMesaje.Size = new System.Drawing.Size(0, 17);
             this.lblMesaje.TabIndex = 36;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.afisareaListeiToolStripMenuItem,
+            this.adaugareAnimeNouToolStripMenuItem1,
+            this.modificareAnimeToolStripMenuItem,
+            this.cautareaUnuiAnimeToolStripMenuItem1,
+            this.stergereaUnuiAnimeToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1406, 28);
+            this.menuStrip1.TabIndex = 37;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // adaugareAnimeNouToolStripMenuItem1
+            // 
+            this.adaugareAnimeNouToolStripMenuItem1.Name = "adaugareAnimeNouToolStripMenuItem1";
+            this.adaugareAnimeNouToolStripMenuItem1.Size = new System.Drawing.Size(162, 24);
+            this.adaugareAnimeNouToolStripMenuItem1.Text = "Adaugare anime nou";
+            this.adaugareAnimeNouToolStripMenuItem1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // modificareAnimeToolStripMenuItem
+            // 
+            this.modificareAnimeToolStripMenuItem.Name = "modificareAnimeToolStripMenuItem";
+            this.modificareAnimeToolStripMenuItem.Size = new System.Drawing.Size(228, 24);
+            this.modificareAnimeToolStripMenuItem.Text = "Modificare unui anime din lista";
+            this.modificareAnimeToolStripMenuItem.Click += new System.EventHandler(this.buttonModificare_Click);
+            // 
+            // cautareaUnuiAnimeToolStripMenuItem1
+            // 
+            this.cautareaUnuiAnimeToolStripMenuItem1.Name = "cautareaUnuiAnimeToolStripMenuItem1";
+            this.cautareaUnuiAnimeToolStripMenuItem1.Size = new System.Drawing.Size(206, 24);
+            this.cautareaUnuiAnimeToolStripMenuItem1.Text = "Cautarea unui anime in lista";
+            this.cautareaUnuiAnimeToolStripMenuItem1.Click += new System.EventHandler(this.buttonCautare_Click);
+            // 
+            // stergereaUnuiAnimeToolStripMenuItem
+            // 
+            this.stergereaUnuiAnimeToolStripMenuItem.Name = "stergereaUnuiAnimeToolStripMenuItem";
+            this.stergereaUnuiAnimeToolStripMenuItem.Size = new System.Drawing.Size(220, 24);
+            this.stergereaUnuiAnimeToolStripMenuItem.Text = "Stergerea unui anime din lista";
+            this.stergereaUnuiAnimeToolStripMenuItem.Click += new System.EventHandler(this.buttonStergere_Click);
+            // 
+            // afisareaListeiToolStripMenuItem
+            // 
+            this.afisareaListeiToolStripMenuItem.Name = "afisareaListeiToolStripMenuItem";
+            this.afisareaListeiToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
+            this.afisareaListeiToolStripMenuItem.Text = "Afisarea listei";
+            this.afisareaListeiToolStripMenuItem.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txtNume1
+            // 
+            this.txtNume1.Location = new System.Drawing.Point(115, 76);
+            this.txtNume1.Name = "txtNume1";
+            this.txtNume1.Size = new System.Drawing.Size(100, 22);
+            this.txtNume1.TabIndex = 38;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(1305, 640);
+            this.ClientSize = new System.Drawing.Size(1406, 568);
+            this.Controls.Add(this.txtNume1);
             this.Controls.Add(this.lblMesaje);
-            this.Controls.Add(this.buttonStergere);
-            this.Controls.Add(this.dataGridAnime);
             this.Controls.Add(this.ListaAnime);
-            this.Controls.Add(this.buttonModificare);
-            this.Controls.Add(this.buttonCautare);
-            this.Controls.Add(this.buttonAfisare);
             this.Controls.Add(this.groupBoxGenuri);
             this.Controls.Add(this.groupBoxStatus);
             this.Controls.Add(this.groupBoxType);
             this.Controls.Add(this.txtRecenzie);
             this.Controls.Add(this.txtEpisoade);
             this.Controls.Add(this.txtSezoane);
-            this.Controls.Add(this.txtNume);
             this.Controls.Add(this.lblRecenzie);
             this.Controls.Add(this.lblEpisoade);
             this.Controls.Add(this.lblSezoane);
-            this.Controls.Add(this.lblNume);
-            this.Controls.Add(this.buttonAdauga);
+            this.Controls.Add(this.lblNume1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anime";
@@ -765,20 +751,18 @@ namespace InterfataUtilizator_WindowsForms
             this.groupBoxStatus.PerformLayout();
             this.groupBoxGenuri.ResumeLayout(false);
             this.groupBoxGenuri.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAnime)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonAdauga;
-        private System.Windows.Forms.Label lblNume;
+        private System.Windows.Forms.Label lblNume1;
         private System.Windows.Forms.Label lblSezoane;
         private System.Windows.Forms.Label lblEpisoade;
         private System.Windows.Forms.Label lblRecenzie;
-        private System.Windows.Forms.TextBox txtNume;
         private System.Windows.Forms.TextBox txtSezoane;
         private System.Windows.Forms.TextBox txtEpisoade;
         private System.Windows.Forms.TextBox txtRecenzie;
@@ -796,9 +780,6 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.CheckBox checkBoxMecha;
         private System.Windows.Forms.CheckBox checkBoxShounenAi;
         private System.Windows.Forms.GroupBox groupBoxGenuri;
-        private System.Windows.Forms.Button buttonAfisare;
-        private System.Windows.Forms.Button buttonCautare;
-        private System.Windows.Forms.Button buttonModificare;
         private System.Windows.Forms.CheckBox checkBoxThriller;
         private System.Windows.Forms.CheckBox checkBoxYuri;
         private System.Windows.Forms.CheckBox checkBoxYaoi;
@@ -828,9 +809,14 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.CheckBox checkBoxHistorical;
         private System.Windows.Forms.CheckBox checkBoxAdventure;
         private System.Windows.Forms.ListBox ListaAnime;
-        private System.Windows.Forms.DataGridView dataGridAnime;
-        private System.Windows.Forms.Button buttonStergere;
         private System.Windows.Forms.Label lblMesaje;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem afisareaListeiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adaugareAnimeNouToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem modificareAnimeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cautareaUnuiAnimeToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem stergereaUnuiAnimeToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtNume1;
     }
 }
 
