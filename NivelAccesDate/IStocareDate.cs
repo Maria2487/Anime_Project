@@ -15,6 +15,8 @@ namespace NivelAccesDate
         Anime GetAnime(string nume);
         Anime GetAnime(int IdAnime);
 
+        bool DeleteAnime(Anime animeUpdate);
+
         //List<Anime> ModificareAnime(ArrayList animeuri);
     }
 }

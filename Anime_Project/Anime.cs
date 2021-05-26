@@ -10,7 +10,6 @@ namespace Anime_Project
         #region CONSTANTE AFISARE
 
         private const char SEPARATOR_PRINCIPAL_FISIER = ';';
-        private const string SEPARATOR_AFISARE = " ";
         private const char SEPARATOR_SECUNDAR_FISIER = ',';
         //private const int FORMAT_TABEL_STANGA = -25;
         //private const int FORMAT_TABEL_DREAPTA = -10;

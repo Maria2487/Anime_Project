@@ -82,7 +82,7 @@ namespace NivelAccesDate
                     while ((line = sr.ReadLine()) != null)
                     {
                         Anime animeFisier = new Anime(line);
-                        if (nume == animeFisier.NumeAnime)
+                        if (nume.ToUpper() == animeFisier.NumeAnime.ToUpper())
                             return animeFisier;
                     }
                 }
@@ -145,6 +145,45 @@ namespace NivelAccesDate
                         {
                             animeFisier = animeUpdate;
                         }
+                        swFisierText.WriteLine(animeFisier.ConvertToStringFisier());
+                    }
+                    actualizareCuSucces = true;
+                }
+            }
+            catch (IOException eIO)
+            {
+                throw new Exception("Eroare la deschiderea fisierului. Mesaj: " + eIO.Message);
+            }
+            catch (Exception eGen)
+            {
+                throw new Exception("Eroare generica. Mesaj: " + eGen.Message);
+            }
+
+            return actualizareCuSucces;
+        }
+
+        public bool DeleteAnime(Anime animeUpdate)
+        {
+            List<Anime> anime = GetAnimeuri();
+            Anime animeFisier;
+            File.Delete(NumeFisier);
+            bool actualizareCuSucces = false;
+            int i = 0;
+            try
+            {
+                using (StreamWriter swFisierText = new StreamWriter(NumeFisier, true))
+                {
+                    foreach(var animeCaut in anime)
+                    {
+                        animeFisier = animeCaut;
+                        i++;
+                        if (animeFisier.IdAnime == animeUpdate.IdAnime)
+                        {
+                            i--;
+                            continue;
+                        }
+                        animeFisier.IdAnime = i;
+                        
                         swFisierText.WriteLine(animeFisier.ConvertToStringFisier());
                     }
                     actualizareCuSucces = true;

@@ -52,49 +52,52 @@ namespace InterfataUtilizator_WindowsForms
             this.checkBoxMecha = new System.Windows.Forms.CheckBox();
             this.checkBoxShounenAi = new System.Windows.Forms.CheckBox();
             this.groupBoxGenuri = new System.Windows.Forms.GroupBox();
+            this.checkBoxThriller = new System.Windows.Forms.CheckBox();
+            this.checkBoxYuri = new System.Windows.Forms.CheckBox();
+            this.checkBoxYaoi = new System.Windows.Forms.CheckBox();
+            this.checkBoxSupernatural = new System.Windows.Forms.CheckBox();
+            this.checkBoxSports = new System.Windows.Forms.CheckBox();
+            this.checkBoxSliceoflife = new System.Windows.Forms.CheckBox();
+            this.checkBoxShounen = new System.Windows.Forms.CheckBox();
+            this.checkBoxShojoai = new System.Windows.Forms.CheckBox();
+            this.checkBoxMartial = new System.Windows.Forms.CheckBox();
+            this.checkBoxHarem = new System.Windows.Forms.CheckBox();
+            this.checkBoxGame = new System.Windows.Forms.CheckBox();
+            this.checkBoxFantasy = new System.Windows.Forms.CheckBox();
+            this.checkBoxEcchi = new System.Windows.Forms.CheckBox();
+            this.checkBoxDrama = new System.Windows.Forms.CheckBox();
+            this.checkBoxDemons = new System.Windows.Forms.CheckBox();
+            this.checkBoxMagic = new System.Windows.Forms.CheckBox();
+            this.checkBoxJosei = new System.Windows.Forms.CheckBox();
+            this.checkBoxShojo = new System.Windows.Forms.CheckBox();
+            this.checkBoxSeinen = new System.Windows.Forms.CheckBox();
+            this.checkBoxSamurai = new System.Windows.Forms.CheckBox();
+            this.checkBoxRomance = new System.Windows.Forms.CheckBox();
+            this.checkBoxPsyhological = new System.Windows.Forms.CheckBox();
+            this.checkBoxMystery = new System.Windows.Forms.CheckBox();
+            this.checkBoxMusic = new System.Windows.Forms.CheckBox();
+            this.checkBoxMilitary = new System.Windows.Forms.CheckBox();
+            this.checkBoxHorror = new System.Windows.Forms.CheckBox();
+            this.checkBoxHistorical = new System.Windows.Forms.CheckBox();
+            this.checkBoxAdventure = new System.Windows.Forms.CheckBox();
             this.buttonAfisare = new System.Windows.Forms.Button();
             this.buttonCautare = new System.Windows.Forms.Button();
             this.buttonModificare = new System.Windows.Forms.Button();
-            this.checkBoxAdventure = new System.Windows.Forms.CheckBox();
-            this.checkBoxHistorical = new System.Windows.Forms.CheckBox();
-            this.checkBoxHorror = new System.Windows.Forms.CheckBox();
-            this.checkBoxMilitary = new System.Windows.Forms.CheckBox();
-            this.checkBoxMusic = new System.Windows.Forms.CheckBox();
-            this.checkBoxMystery = new System.Windows.Forms.CheckBox();
-            this.checkBoxPsyhological = new System.Windows.Forms.CheckBox();
-            this.checkBoxRomance = new System.Windows.Forms.CheckBox();
-            this.checkBoxSamurai = new System.Windows.Forms.CheckBox();
-            this.checkBoxSeinen = new System.Windows.Forms.CheckBox();
-            this.checkBoxShojo = new System.Windows.Forms.CheckBox();
-            this.checkBoxJosei = new System.Windows.Forms.CheckBox();
-            this.checkBoxMagic = new System.Windows.Forms.CheckBox();
-            this.checkBoxDemons = new System.Windows.Forms.CheckBox();
-            this.checkBoxDrama = new System.Windows.Forms.CheckBox();
-            this.checkBoxEcchi = new System.Windows.Forms.CheckBox();
-            this.checkBoxFantasy = new System.Windows.Forms.CheckBox();
-            this.checkBoxGame = new System.Windows.Forms.CheckBox();
-            this.checkBoxHarem = new System.Windows.Forms.CheckBox();
-            this.checkBoxMartial = new System.Windows.Forms.CheckBox();
-            this.checkBoxShojoai = new System.Windows.Forms.CheckBox();
-            this.checkBoxShounen = new System.Windows.Forms.CheckBox();
-            this.checkBoxSliceoflife = new System.Windows.Forms.CheckBox();
-            this.checkBoxSports = new System.Windows.Forms.CheckBox();
-            this.checkBoxSupernatural = new System.Windows.Forms.CheckBox();
-            this.checkBoxYaoi = new System.Windows.Forms.CheckBox();
-            this.checkBoxYuri = new System.Windows.Forms.CheckBox();
-            this.checkBoxThriller = new System.Windows.Forms.CheckBox();
             this.ListaAnime = new System.Windows.Forms.ListBox();
-            this.lblMesaj = new System.Windows.Forms.Label();
+            this.dataGridAnime = new System.Windows.Forms.DataGridView();
+            this.buttonStergere = new System.Windows.Forms.Button();
+            this.lblMesaje = new System.Windows.Forms.Label();
             this.groupBoxType.SuspendLayout();
             this.groupBoxStatus.SuspendLayout();
             this.groupBoxGenuri.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAnime)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonAdauga
             // 
-            this.buttonAdauga.Location = new System.Drawing.Point(837, 514);
+            this.buttonAdauga.Location = new System.Drawing.Point(37, 497);
             this.buttonAdauga.Name = "buttonAdauga";
-            this.buttonAdauga.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdauga.Size = new System.Drawing.Size(127, 30);
             this.buttonAdauga.TabIndex = 0;
             this.buttonAdauga.Text = "Adauga";
             this.buttonAdauga.UseVisualStyleBackColor = true;
@@ -344,338 +347,12 @@ namespace InterfataUtilizator_WindowsForms
             this.groupBoxGenuri.Controls.Add(this.checkBoxShounenAi);
             this.groupBoxGenuri.Controls.Add(this.checkBoxComedy);
             this.groupBoxGenuri.Controls.Add(this.checkBoxMecha);
-            this.groupBoxGenuri.Location = new System.Drawing.Point(255, 26);
+            this.groupBoxGenuri.Location = new System.Drawing.Point(260, 12);
             this.groupBoxGenuri.Name = "groupBoxGenuri";
             this.groupBoxGenuri.Size = new System.Drawing.Size(273, 465);
             this.groupBoxGenuri.TabIndex = 24;
             this.groupBoxGenuri.TabStop = false;
             this.groupBoxGenuri.Text = "Gen/Genuri";
-            // 
-            // buttonAfisare
-            // 
-            this.buttonAfisare.Location = new System.Drawing.Point(711, 514);
-            this.buttonAfisare.Name = "buttonAfisare";
-            this.buttonAfisare.Size = new System.Drawing.Size(75, 23);
-            this.buttonAfisare.TabIndex = 25;
-            this.buttonAfisare.Text = "Afisare";
-            this.buttonAfisare.UseVisualStyleBackColor = true;
-            this.buttonAfisare.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // buttonCautare
-            // 
-            this.buttonCautare.Location = new System.Drawing.Point(598, 514);
-            this.buttonCautare.Name = "buttonCautare";
-            this.buttonCautare.Size = new System.Drawing.Size(75, 23);
-            this.buttonCautare.TabIndex = 26;
-            this.buttonCautare.Text = "Cautare";
-            this.buttonCautare.UseVisualStyleBackColor = true;
-            // 
-            // buttonModificare
-            // 
-            this.buttonModificare.Location = new System.Drawing.Point(956, 514);
-            this.buttonModificare.Name = "buttonModificare";
-            this.buttonModificare.Size = new System.Drawing.Size(100, 27);
-            this.buttonModificare.TabIndex = 27;
-            this.buttonModificare.Text = "Modificare";
-            this.buttonModificare.UseVisualStyleBackColor = true;
-            this.buttonModificare.Click += new System.EventHandler(this.buttonModificare_Click);
-            // 
-            // checkBoxAdventure
-            // 
-            this.checkBoxAdventure.AutoSize = true;
-            this.checkBoxAdventure.Location = new System.Drawing.Point(127, 21);
-            this.checkBoxAdventure.Name = "checkBoxAdventure";
-            this.checkBoxAdventure.Size = new System.Drawing.Size(115, 21);
-            this.checkBoxAdventure.TabIndex = 24;
-            this.checkBoxAdventure.Text = "ADVENTURE";
-            this.checkBoxAdventure.UseVisualStyleBackColor = true;
-            this.checkBoxAdventure.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxHistorical
-            // 
-            this.checkBoxHistorical.AutoSize = true;
-            this.checkBoxHistorical.Location = new System.Drawing.Point(5, 434);
-            this.checkBoxHistorical.Name = "checkBoxHistorical";
-            this.checkBoxHistorical.Size = new System.Drawing.Size(111, 21);
-            this.checkBoxHistorical.TabIndex = 25;
-            this.checkBoxHistorical.Text = "HISTORICAL";
-            this.checkBoxHistorical.UseVisualStyleBackColor = true;
-            this.checkBoxHistorical.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxHorror
-            // 
-            this.checkBoxHorror.AutoSize = true;
-            this.checkBoxHorror.Location = new System.Drawing.Point(7, 407);
-            this.checkBoxHorror.Name = "checkBoxHorror";
-            this.checkBoxHorror.Size = new System.Drawing.Size(92, 21);
-            this.checkBoxHorror.TabIndex = 26;
-            this.checkBoxHorror.Text = "HORROR";
-            this.checkBoxHorror.UseVisualStyleBackColor = true;
-            this.checkBoxHorror.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxMilitary
-            // 
-            this.checkBoxMilitary.AutoSize = true;
-            this.checkBoxMilitary.Location = new System.Drawing.Point(127, 50);
-            this.checkBoxMilitary.Name = "checkBoxMilitary";
-            this.checkBoxMilitary.Size = new System.Drawing.Size(92, 21);
-            this.checkBoxMilitary.TabIndex = 27;
-            this.checkBoxMilitary.Text = "MILITARY";
-            this.checkBoxMilitary.UseVisualStyleBackColor = true;
-            this.checkBoxMilitary.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxMusic
-            // 
-            this.checkBoxMusic.AutoSize = true;
-            this.checkBoxMusic.Location = new System.Drawing.Point(127, 77);
-            this.checkBoxMusic.Name = "checkBoxMusic";
-            this.checkBoxMusic.Size = new System.Drawing.Size(72, 21);
-            this.checkBoxMusic.TabIndex = 28;
-            this.checkBoxMusic.Text = "MUSIC";
-            this.checkBoxMusic.UseVisualStyleBackColor = true;
-            this.checkBoxMusic.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxMystery
-            // 
-            this.checkBoxMystery.AutoSize = true;
-            this.checkBoxMystery.Location = new System.Drawing.Point(127, 104);
-            this.checkBoxMystery.Name = "checkBoxMystery";
-            this.checkBoxMystery.Size = new System.Drawing.Size(96, 21);
-            this.checkBoxMystery.TabIndex = 29;
-            this.checkBoxMystery.Text = "MYSTERY";
-            this.checkBoxMystery.UseVisualStyleBackColor = true;
-            this.checkBoxMystery.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxPsyhological
-            // 
-            this.checkBoxPsyhological.AutoSize = true;
-            this.checkBoxPsyhological.Location = new System.Drawing.Point(127, 131);
-            this.checkBoxPsyhological.Name = "checkBoxPsyhological";
-            this.checkBoxPsyhological.Size = new System.Drawing.Size(137, 21);
-            this.checkBoxPsyhological.TabIndex = 30;
-            this.checkBoxPsyhological.Text = "PSYHOLOGICAL";
-            this.checkBoxPsyhological.UseVisualStyleBackColor = true;
-            this.checkBoxPsyhological.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxRomance
-            // 
-            this.checkBoxRomance.AutoSize = true;
-            this.checkBoxRomance.Location = new System.Drawing.Point(127, 158);
-            this.checkBoxRomance.Name = "checkBoxRomance";
-            this.checkBoxRomance.Size = new System.Drawing.Size(99, 21);
-            this.checkBoxRomance.TabIndex = 31;
-            this.checkBoxRomance.Text = "ROMANCE";
-            this.checkBoxRomance.UseVisualStyleBackColor = true;
-            this.checkBoxRomance.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxSamurai
-            // 
-            this.checkBoxSamurai.AutoSize = true;
-            this.checkBoxSamurai.Location = new System.Drawing.Point(127, 185);
-            this.checkBoxSamurai.Name = "checkBoxSamurai";
-            this.checkBoxSamurai.Size = new System.Drawing.Size(91, 21);
-            this.checkBoxSamurai.TabIndex = 32;
-            this.checkBoxSamurai.Text = "SAMURAI";
-            this.checkBoxSamurai.UseVisualStyleBackColor = true;
-            this.checkBoxSamurai.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxSeinen
-            // 
-            this.checkBoxSeinen.AutoSize = true;
-            this.checkBoxSeinen.Location = new System.Drawing.Point(127, 212);
-            this.checkBoxSeinen.Name = "checkBoxSeinen";
-            this.checkBoxSeinen.Size = new System.Drawing.Size(80, 21);
-            this.checkBoxSeinen.TabIndex = 33;
-            this.checkBoxSeinen.Text = "SEINEN";
-            this.checkBoxSeinen.UseVisualStyleBackColor = true;
-            this.checkBoxSeinen.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxShojo
-            // 
-            this.checkBoxShojo.AutoSize = true;
-            this.checkBoxShojo.Location = new System.Drawing.Point(127, 241);
-            this.checkBoxShojo.Name = "checkBoxShojo";
-            this.checkBoxShojo.Size = new System.Drawing.Size(78, 21);
-            this.checkBoxShojo.TabIndex = 34;
-            this.checkBoxShojo.Text = "SHOJO";
-            this.checkBoxShojo.UseVisualStyleBackColor = true;
-            this.checkBoxShojo.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxJosei
-            // 
-            this.checkBoxJosei.AutoSize = true;
-            this.checkBoxJosei.Location = new System.Drawing.Point(5, 380);
-            this.checkBoxJosei.Name = "checkBoxJosei";
-            this.checkBoxJosei.Size = new System.Drawing.Size(69, 21);
-            this.checkBoxJosei.TabIndex = 35;
-            this.checkBoxJosei.Text = "JOSEI";
-            this.checkBoxJosei.UseVisualStyleBackColor = true;
-            this.checkBoxJosei.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxMagic
-            // 
-            this.checkBoxMagic.AutoSize = true;
-            this.checkBoxMagic.Location = new System.Drawing.Point(6, 352);
-            this.checkBoxMagic.Name = "checkBoxMagic";
-            this.checkBoxMagic.Size = new System.Drawing.Size(73, 21);
-            this.checkBoxMagic.TabIndex = 36;
-            this.checkBoxMagic.Text = "MAGIC";
-            this.checkBoxMagic.UseVisualStyleBackColor = true;
-            this.checkBoxMagic.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxDemons
-            // 
-            this.checkBoxDemons.AutoSize = true;
-            this.checkBoxDemons.Location = new System.Drawing.Point(5, 127);
-            this.checkBoxDemons.Name = "checkBoxDemons";
-            this.checkBoxDemons.Size = new System.Drawing.Size(90, 21);
-            this.checkBoxDemons.TabIndex = 37;
-            this.checkBoxDemons.Text = "DEMONS";
-            this.checkBoxDemons.UseVisualStyleBackColor = true;
-            this.checkBoxDemons.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxDrama
-            // 
-            this.checkBoxDrama.AutoSize = true;
-            this.checkBoxDrama.Location = new System.Drawing.Point(6, 157);
-            this.checkBoxDrama.Name = "checkBoxDrama";
-            this.checkBoxDrama.Size = new System.Drawing.Size(79, 21);
-            this.checkBoxDrama.TabIndex = 38;
-            this.checkBoxDrama.Text = "DRAMA";
-            this.checkBoxDrama.UseVisualStyleBackColor = true;
-            this.checkBoxDrama.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxEcchi
-            // 
-            this.checkBoxEcchi.AutoSize = true;
-            this.checkBoxEcchi.Location = new System.Drawing.Point(7, 183);
-            this.checkBoxEcchi.Name = "checkBoxEcchi";
-            this.checkBoxEcchi.Size = new System.Drawing.Size(70, 21);
-            this.checkBoxEcchi.TabIndex = 39;
-            this.checkBoxEcchi.Text = "ECCHI";
-            this.checkBoxEcchi.UseVisualStyleBackColor = true;
-            this.checkBoxEcchi.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxFantasy
-            // 
-            this.checkBoxFantasy.AutoSize = true;
-            this.checkBoxFantasy.Location = new System.Drawing.Point(6, 210);
-            this.checkBoxFantasy.Name = "checkBoxFantasy";
-            this.checkBoxFantasy.Size = new System.Drawing.Size(93, 21);
-            this.checkBoxFantasy.TabIndex = 40;
-            this.checkBoxFantasy.Text = "FANTASY";
-            this.checkBoxFantasy.UseVisualStyleBackColor = true;
-            this.checkBoxFantasy.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxGame
-            // 
-            this.checkBoxGame.AutoSize = true;
-            this.checkBoxGame.Location = new System.Drawing.Point(7, 238);
-            this.checkBoxGame.Name = "checkBoxGame";
-            this.checkBoxGame.Size = new System.Drawing.Size(70, 21);
-            this.checkBoxGame.TabIndex = 41;
-            this.checkBoxGame.Text = "GAME";
-            this.checkBoxGame.UseVisualStyleBackColor = true;
-            this.checkBoxGame.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxHarem
-            // 
-            this.checkBoxHarem.AutoSize = true;
-            this.checkBoxHarem.Location = new System.Drawing.Point(7, 266);
-            this.checkBoxHarem.Name = "checkBoxHarem";
-            this.checkBoxHarem.Size = new System.Drawing.Size(79, 21);
-            this.checkBoxHarem.TabIndex = 42;
-            this.checkBoxHarem.Text = "HAREM";
-            this.checkBoxHarem.UseVisualStyleBackColor = true;
-            this.checkBoxHarem.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxMartial
-            // 
-            this.checkBoxMartial.AutoSize = true;
-            this.checkBoxMartial.Location = new System.Drawing.Point(5, 325);
-            this.checkBoxMartial.Name = "checkBoxMartial";
-            this.checkBoxMartial.Size = new System.Drawing.Size(89, 21);
-            this.checkBoxMartial.TabIndex = 43;
-            this.checkBoxMartial.Text = "MARTIAL";
-            this.checkBoxMartial.UseVisualStyleBackColor = true;
-            this.checkBoxMartial.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxShojoai
-            // 
-            this.checkBoxShojoai.AutoSize = true;
-            this.checkBoxShojoai.Location = new System.Drawing.Point(127, 325);
-            this.checkBoxShojoai.Name = "checkBoxShojoai";
-            this.checkBoxShojoai.Size = new System.Drawing.Size(94, 21);
-            this.checkBoxShojoai.TabIndex = 44;
-            this.checkBoxShojoai.Text = "SHOJO AI";
-            this.checkBoxShojoai.UseVisualStyleBackColor = true;
-            this.checkBoxShojoai.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxShounen
-            // 
-            this.checkBoxShounen.AutoSize = true;
-            this.checkBoxShounen.Location = new System.Drawing.Point(127, 434);
-            this.checkBoxShounen.Name = "checkBoxShounen";
-            this.checkBoxShounen.Size = new System.Drawing.Size(99, 21);
-            this.checkBoxShounen.TabIndex = 45;
-            this.checkBoxShounen.Text = "SHOUNEN";
-            this.checkBoxShounen.UseVisualStyleBackColor = true;
-            this.checkBoxShounen.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxSliceoflife
-            // 
-            this.checkBoxSliceoflife.AutoSize = true;
-            this.checkBoxSliceoflife.Location = new System.Drawing.Point(127, 407);
-            this.checkBoxSliceoflife.Name = "checkBoxSliceoflife";
-            this.checkBoxSliceoflife.Size = new System.Drawing.Size(123, 21);
-            this.checkBoxSliceoflife.TabIndex = 46;
-            this.checkBoxSliceoflife.Text = "SLICE OF LIFE";
-            this.checkBoxSliceoflife.UseVisualStyleBackColor = true;
-            this.checkBoxSliceoflife.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxSports
-            // 
-            this.checkBoxSports.AutoSize = true;
-            this.checkBoxSports.Location = new System.Drawing.Point(127, 293);
-            this.checkBoxSports.Name = "checkBoxSports";
-            this.checkBoxSports.Size = new System.Drawing.Size(87, 21);
-            this.checkBoxSports.TabIndex = 47;
-            this.checkBoxSports.Text = "SPORTS";
-            this.checkBoxSports.UseVisualStyleBackColor = true;
-            this.checkBoxSports.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxSupernatural
-            // 
-            this.checkBoxSupernatural.AutoSize = true;
-            this.checkBoxSupernatural.Location = new System.Drawing.Point(127, 268);
-            this.checkBoxSupernatural.Name = "checkBoxSupernatural";
-            this.checkBoxSupernatural.Size = new System.Drawing.Size(142, 21);
-            this.checkBoxSupernatural.TabIndex = 48;
-            this.checkBoxSupernatural.Text = "SUPERNATURAL";
-            this.checkBoxSupernatural.UseVisualStyleBackColor = true;
-            this.checkBoxSupernatural.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxYaoi
-            // 
-            this.checkBoxYaoi.AutoSize = true;
-            this.checkBoxYaoi.Location = new System.Drawing.Point(127, 380);
-            this.checkBoxYaoi.Name = "checkBoxYaoi";
-            this.checkBoxYaoi.Size = new System.Drawing.Size(62, 21);
-            this.checkBoxYaoi.TabIndex = 49;
-            this.checkBoxYaoi.Text = "YAOI";
-            this.checkBoxYaoi.UseVisualStyleBackColor = true;
-            this.checkBoxYaoi.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBoxYuri
-            // 
-            this.checkBoxYuri.AutoSize = true;
-            this.checkBoxYuri.Location = new System.Drawing.Point(127, 352);
-            this.checkBoxYuri.Name = "checkBoxYuri";
-            this.checkBoxYuri.Size = new System.Drawing.Size(62, 21);
-            this.checkBoxYuri.TabIndex = 50;
-            this.checkBoxYuri.Text = "YURI";
-            this.checkBoxYuri.UseVisualStyleBackColor = true;
-            this.checkBoxYuri.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBoxThriller
             // 
@@ -688,31 +365,380 @@ namespace InterfataUtilizator_WindowsForms
             this.checkBoxThriller.UseVisualStyleBackColor = true;
             this.checkBoxThriller.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // checkBoxYuri
+            // 
+            this.checkBoxYuri.AutoSize = true;
+            this.checkBoxYuri.Location = new System.Drawing.Point(127, 352);
+            this.checkBoxYuri.Name = "checkBoxYuri";
+            this.checkBoxYuri.Size = new System.Drawing.Size(62, 21);
+            this.checkBoxYuri.TabIndex = 50;
+            this.checkBoxYuri.Text = "YURI";
+            this.checkBoxYuri.UseVisualStyleBackColor = true;
+            this.checkBoxYuri.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxYaoi
+            // 
+            this.checkBoxYaoi.AutoSize = true;
+            this.checkBoxYaoi.Location = new System.Drawing.Point(127, 380);
+            this.checkBoxYaoi.Name = "checkBoxYaoi";
+            this.checkBoxYaoi.Size = new System.Drawing.Size(62, 21);
+            this.checkBoxYaoi.TabIndex = 49;
+            this.checkBoxYaoi.Text = "YAOI";
+            this.checkBoxYaoi.UseVisualStyleBackColor = true;
+            this.checkBoxYaoi.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxSupernatural
+            // 
+            this.checkBoxSupernatural.AutoSize = true;
+            this.checkBoxSupernatural.Location = new System.Drawing.Point(127, 268);
+            this.checkBoxSupernatural.Name = "checkBoxSupernatural";
+            this.checkBoxSupernatural.Size = new System.Drawing.Size(142, 21);
+            this.checkBoxSupernatural.TabIndex = 48;
+            this.checkBoxSupernatural.Text = "SUPERNATURAL";
+            this.checkBoxSupernatural.UseVisualStyleBackColor = true;
+            this.checkBoxSupernatural.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxSports
+            // 
+            this.checkBoxSports.AutoSize = true;
+            this.checkBoxSports.Location = new System.Drawing.Point(127, 293);
+            this.checkBoxSports.Name = "checkBoxSports";
+            this.checkBoxSports.Size = new System.Drawing.Size(87, 21);
+            this.checkBoxSports.TabIndex = 47;
+            this.checkBoxSports.Text = "SPORTS";
+            this.checkBoxSports.UseVisualStyleBackColor = true;
+            this.checkBoxSports.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxSliceoflife
+            // 
+            this.checkBoxSliceoflife.AutoSize = true;
+            this.checkBoxSliceoflife.Location = new System.Drawing.Point(127, 407);
+            this.checkBoxSliceoflife.Name = "checkBoxSliceoflife";
+            this.checkBoxSliceoflife.Size = new System.Drawing.Size(123, 21);
+            this.checkBoxSliceoflife.TabIndex = 46;
+            this.checkBoxSliceoflife.Text = "SLICE OF LIFE";
+            this.checkBoxSliceoflife.UseVisualStyleBackColor = true;
+            this.checkBoxSliceoflife.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxShounen
+            // 
+            this.checkBoxShounen.AutoSize = true;
+            this.checkBoxShounen.Location = new System.Drawing.Point(127, 434);
+            this.checkBoxShounen.Name = "checkBoxShounen";
+            this.checkBoxShounen.Size = new System.Drawing.Size(99, 21);
+            this.checkBoxShounen.TabIndex = 45;
+            this.checkBoxShounen.Text = "SHOUNEN";
+            this.checkBoxShounen.UseVisualStyleBackColor = true;
+            this.checkBoxShounen.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxShojoai
+            // 
+            this.checkBoxShojoai.AutoSize = true;
+            this.checkBoxShojoai.Location = new System.Drawing.Point(127, 325);
+            this.checkBoxShojoai.Name = "checkBoxShojoai";
+            this.checkBoxShojoai.Size = new System.Drawing.Size(94, 21);
+            this.checkBoxShojoai.TabIndex = 44;
+            this.checkBoxShojoai.Text = "SHOJO AI";
+            this.checkBoxShojoai.UseVisualStyleBackColor = true;
+            this.checkBoxShojoai.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxMartial
+            // 
+            this.checkBoxMartial.AutoSize = true;
+            this.checkBoxMartial.Location = new System.Drawing.Point(5, 325);
+            this.checkBoxMartial.Name = "checkBoxMartial";
+            this.checkBoxMartial.Size = new System.Drawing.Size(89, 21);
+            this.checkBoxMartial.TabIndex = 43;
+            this.checkBoxMartial.Text = "MARTIAL";
+            this.checkBoxMartial.UseVisualStyleBackColor = true;
+            this.checkBoxMartial.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxHarem
+            // 
+            this.checkBoxHarem.AutoSize = true;
+            this.checkBoxHarem.Location = new System.Drawing.Point(7, 266);
+            this.checkBoxHarem.Name = "checkBoxHarem";
+            this.checkBoxHarem.Size = new System.Drawing.Size(79, 21);
+            this.checkBoxHarem.TabIndex = 42;
+            this.checkBoxHarem.Text = "HAREM";
+            this.checkBoxHarem.UseVisualStyleBackColor = true;
+            this.checkBoxHarem.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxGame
+            // 
+            this.checkBoxGame.AutoSize = true;
+            this.checkBoxGame.Location = new System.Drawing.Point(7, 238);
+            this.checkBoxGame.Name = "checkBoxGame";
+            this.checkBoxGame.Size = new System.Drawing.Size(70, 21);
+            this.checkBoxGame.TabIndex = 41;
+            this.checkBoxGame.Text = "GAME";
+            this.checkBoxGame.UseVisualStyleBackColor = true;
+            this.checkBoxGame.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxFantasy
+            // 
+            this.checkBoxFantasy.AutoSize = true;
+            this.checkBoxFantasy.Location = new System.Drawing.Point(6, 210);
+            this.checkBoxFantasy.Name = "checkBoxFantasy";
+            this.checkBoxFantasy.Size = new System.Drawing.Size(93, 21);
+            this.checkBoxFantasy.TabIndex = 40;
+            this.checkBoxFantasy.Text = "FANTASY";
+            this.checkBoxFantasy.UseVisualStyleBackColor = true;
+            this.checkBoxFantasy.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxEcchi
+            // 
+            this.checkBoxEcchi.AutoSize = true;
+            this.checkBoxEcchi.Location = new System.Drawing.Point(7, 183);
+            this.checkBoxEcchi.Name = "checkBoxEcchi";
+            this.checkBoxEcchi.Size = new System.Drawing.Size(70, 21);
+            this.checkBoxEcchi.TabIndex = 39;
+            this.checkBoxEcchi.Text = "ECCHI";
+            this.checkBoxEcchi.UseVisualStyleBackColor = true;
+            this.checkBoxEcchi.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxDrama
+            // 
+            this.checkBoxDrama.AutoSize = true;
+            this.checkBoxDrama.Location = new System.Drawing.Point(6, 157);
+            this.checkBoxDrama.Name = "checkBoxDrama";
+            this.checkBoxDrama.Size = new System.Drawing.Size(79, 21);
+            this.checkBoxDrama.TabIndex = 38;
+            this.checkBoxDrama.Text = "DRAMA";
+            this.checkBoxDrama.UseVisualStyleBackColor = true;
+            this.checkBoxDrama.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxDemons
+            // 
+            this.checkBoxDemons.AutoSize = true;
+            this.checkBoxDemons.Location = new System.Drawing.Point(5, 127);
+            this.checkBoxDemons.Name = "checkBoxDemons";
+            this.checkBoxDemons.Size = new System.Drawing.Size(90, 21);
+            this.checkBoxDemons.TabIndex = 37;
+            this.checkBoxDemons.Text = "DEMONS";
+            this.checkBoxDemons.UseVisualStyleBackColor = true;
+            this.checkBoxDemons.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxMagic
+            // 
+            this.checkBoxMagic.AutoSize = true;
+            this.checkBoxMagic.Location = new System.Drawing.Point(6, 352);
+            this.checkBoxMagic.Name = "checkBoxMagic";
+            this.checkBoxMagic.Size = new System.Drawing.Size(73, 21);
+            this.checkBoxMagic.TabIndex = 36;
+            this.checkBoxMagic.Text = "MAGIC";
+            this.checkBoxMagic.UseVisualStyleBackColor = true;
+            this.checkBoxMagic.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxJosei
+            // 
+            this.checkBoxJosei.AutoSize = true;
+            this.checkBoxJosei.Location = new System.Drawing.Point(5, 380);
+            this.checkBoxJosei.Name = "checkBoxJosei";
+            this.checkBoxJosei.Size = new System.Drawing.Size(69, 21);
+            this.checkBoxJosei.TabIndex = 35;
+            this.checkBoxJosei.Text = "JOSEI";
+            this.checkBoxJosei.UseVisualStyleBackColor = true;
+            this.checkBoxJosei.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxShojo
+            // 
+            this.checkBoxShojo.AutoSize = true;
+            this.checkBoxShojo.Location = new System.Drawing.Point(127, 241);
+            this.checkBoxShojo.Name = "checkBoxShojo";
+            this.checkBoxShojo.Size = new System.Drawing.Size(78, 21);
+            this.checkBoxShojo.TabIndex = 34;
+            this.checkBoxShojo.Text = "SHOJO";
+            this.checkBoxShojo.UseVisualStyleBackColor = true;
+            this.checkBoxShojo.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxSeinen
+            // 
+            this.checkBoxSeinen.AutoSize = true;
+            this.checkBoxSeinen.Location = new System.Drawing.Point(127, 212);
+            this.checkBoxSeinen.Name = "checkBoxSeinen";
+            this.checkBoxSeinen.Size = new System.Drawing.Size(80, 21);
+            this.checkBoxSeinen.TabIndex = 33;
+            this.checkBoxSeinen.Text = "SEINEN";
+            this.checkBoxSeinen.UseVisualStyleBackColor = true;
+            this.checkBoxSeinen.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxSamurai
+            // 
+            this.checkBoxSamurai.AutoSize = true;
+            this.checkBoxSamurai.Location = new System.Drawing.Point(127, 185);
+            this.checkBoxSamurai.Name = "checkBoxSamurai";
+            this.checkBoxSamurai.Size = new System.Drawing.Size(91, 21);
+            this.checkBoxSamurai.TabIndex = 32;
+            this.checkBoxSamurai.Text = "SAMURAI";
+            this.checkBoxSamurai.UseVisualStyleBackColor = true;
+            this.checkBoxSamurai.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxRomance
+            // 
+            this.checkBoxRomance.AutoSize = true;
+            this.checkBoxRomance.Location = new System.Drawing.Point(127, 158);
+            this.checkBoxRomance.Name = "checkBoxRomance";
+            this.checkBoxRomance.Size = new System.Drawing.Size(99, 21);
+            this.checkBoxRomance.TabIndex = 31;
+            this.checkBoxRomance.Text = "ROMANCE";
+            this.checkBoxRomance.UseVisualStyleBackColor = true;
+            this.checkBoxRomance.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxPsyhological
+            // 
+            this.checkBoxPsyhological.AutoSize = true;
+            this.checkBoxPsyhological.Location = new System.Drawing.Point(127, 131);
+            this.checkBoxPsyhological.Name = "checkBoxPsyhological";
+            this.checkBoxPsyhological.Size = new System.Drawing.Size(137, 21);
+            this.checkBoxPsyhological.TabIndex = 30;
+            this.checkBoxPsyhological.Text = "PSYHOLOGICAL";
+            this.checkBoxPsyhological.UseVisualStyleBackColor = true;
+            this.checkBoxPsyhological.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxMystery
+            // 
+            this.checkBoxMystery.AutoSize = true;
+            this.checkBoxMystery.Location = new System.Drawing.Point(127, 104);
+            this.checkBoxMystery.Name = "checkBoxMystery";
+            this.checkBoxMystery.Size = new System.Drawing.Size(96, 21);
+            this.checkBoxMystery.TabIndex = 29;
+            this.checkBoxMystery.Text = "MYSTERY";
+            this.checkBoxMystery.UseVisualStyleBackColor = true;
+            this.checkBoxMystery.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxMusic
+            // 
+            this.checkBoxMusic.AutoSize = true;
+            this.checkBoxMusic.Location = new System.Drawing.Point(127, 77);
+            this.checkBoxMusic.Name = "checkBoxMusic";
+            this.checkBoxMusic.Size = new System.Drawing.Size(72, 21);
+            this.checkBoxMusic.TabIndex = 28;
+            this.checkBoxMusic.Text = "MUSIC";
+            this.checkBoxMusic.UseVisualStyleBackColor = true;
+            this.checkBoxMusic.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxMilitary
+            // 
+            this.checkBoxMilitary.AutoSize = true;
+            this.checkBoxMilitary.Location = new System.Drawing.Point(127, 50);
+            this.checkBoxMilitary.Name = "checkBoxMilitary";
+            this.checkBoxMilitary.Size = new System.Drawing.Size(92, 21);
+            this.checkBoxMilitary.TabIndex = 27;
+            this.checkBoxMilitary.Text = "MILITARY";
+            this.checkBoxMilitary.UseVisualStyleBackColor = true;
+            this.checkBoxMilitary.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxHorror
+            // 
+            this.checkBoxHorror.AutoSize = true;
+            this.checkBoxHorror.Location = new System.Drawing.Point(7, 407);
+            this.checkBoxHorror.Name = "checkBoxHorror";
+            this.checkBoxHorror.Size = new System.Drawing.Size(92, 21);
+            this.checkBoxHorror.TabIndex = 26;
+            this.checkBoxHorror.Text = "HORROR";
+            this.checkBoxHorror.UseVisualStyleBackColor = true;
+            this.checkBoxHorror.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxHistorical
+            // 
+            this.checkBoxHistorical.AutoSize = true;
+            this.checkBoxHistorical.Location = new System.Drawing.Point(5, 434);
+            this.checkBoxHistorical.Name = "checkBoxHistorical";
+            this.checkBoxHistorical.Size = new System.Drawing.Size(111, 21);
+            this.checkBoxHistorical.TabIndex = 25;
+            this.checkBoxHistorical.Text = "HISTORICAL";
+            this.checkBoxHistorical.UseVisualStyleBackColor = true;
+            this.checkBoxHistorical.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxAdventure
+            // 
+            this.checkBoxAdventure.AutoSize = true;
+            this.checkBoxAdventure.Location = new System.Drawing.Point(127, 21);
+            this.checkBoxAdventure.Name = "checkBoxAdventure";
+            this.checkBoxAdventure.Size = new System.Drawing.Size(115, 21);
+            this.checkBoxAdventure.TabIndex = 24;
+            this.checkBoxAdventure.Text = "ADVENTURE";
+            this.checkBoxAdventure.UseVisualStyleBackColor = true;
+            this.checkBoxAdventure.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // buttonAfisare
+            // 
+            this.buttonAfisare.Location = new System.Drawing.Point(37, 461);
+            this.buttonAfisare.Name = "buttonAfisare";
+            this.buttonAfisare.Size = new System.Drawing.Size(127, 30);
+            this.buttonAfisare.TabIndex = 25;
+            this.buttonAfisare.Text = "Afisare";
+            this.buttonAfisare.UseVisualStyleBackColor = true;
+            this.buttonAfisare.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // buttonCautare
+            // 
+            this.buttonCautare.Location = new System.Drawing.Point(37, 533);
+            this.buttonCautare.Name = "buttonCautare";
+            this.buttonCautare.Size = new System.Drawing.Size(127, 30);
+            this.buttonCautare.TabIndex = 26;
+            this.buttonCautare.Text = "Cautare";
+            this.buttonCautare.UseVisualStyleBackColor = true;
+            this.buttonCautare.Click += new System.EventHandler(this.buttonCautare_Click);
+            // 
+            // buttonModificare
+            // 
+            this.buttonModificare.Location = new System.Drawing.Point(37, 569);
+            this.buttonModificare.Name = "buttonModificare";
+            this.buttonModificare.Size = new System.Drawing.Size(127, 30);
+            this.buttonModificare.TabIndex = 27;
+            this.buttonModificare.Text = "Modificare";
+            this.buttonModificare.UseVisualStyleBackColor = true;
+            this.buttonModificare.Click += new System.EventHandler(this.buttonModificare_Click);
+            // 
             // ListaAnime
             // 
             this.ListaAnime.FormattingEnabled = true;
             this.ListaAnime.ItemHeight = 16;
-            this.ListaAnime.Location = new System.Drawing.Point(556, 26);
+            this.ListaAnime.Location = new System.Drawing.Point(549, 26);
             this.ListaAnime.Name = "ListaAnime";
-            this.ListaAnime.Size = new System.Drawing.Size(753, 468);
+            this.ListaAnime.Size = new System.Drawing.Size(720, 260);
             this.ListaAnime.TabIndex = 30;
             this.ListaAnime.SelectedIndexChanged += new System.EventHandler(this.ListaAnime_SelectedIndexChanged);
             // 
-            // lblMesaj
+            // dataGridAnime
             // 
-            this.lblMesaj.AutoSize = true;
-            this.lblMesaj.Location = new System.Drawing.Point(1089, 519);
-            this.lblMesaj.Name = "lblMesaj";
-            this.lblMesaj.Size = new System.Drawing.Size(0, 17);
-            this.lblMesaj.TabIndex = 31;
+            this.dataGridAnime.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridAnime.Location = new System.Drawing.Point(549, 325);
+            this.dataGridAnime.Name = "dataGridAnime";
+            this.dataGridAnime.RowHeadersWidth = 51;
+            this.dataGridAnime.RowTemplate.Height = 24;
+            this.dataGridAnime.Size = new System.Drawing.Size(720, 246);
+            this.dataGridAnime.TabIndex = 34;
+            // 
+            // buttonStergere
+            // 
+            this.buttonStergere.Location = new System.Drawing.Point(37, 605);
+            this.buttonStergere.Name = "buttonStergere";
+            this.buttonStergere.Size = new System.Drawing.Size(127, 30);
+            this.buttonStergere.TabIndex = 35;
+            this.buttonStergere.Text = "Stergere";
+            this.buttonStergere.UseVisualStyleBackColor = true;
+            this.buttonStergere.Click += new System.EventHandler(this.buttonStergere_Click);
+            // 
+            // lblMesaje
+            // 
+            this.lblMesaje.AutoSize = true;
+            this.lblMesaje.Location = new System.Drawing.Point(207, 554);
+            this.lblMesaje.Name = "lblMesaje";
+            this.lblMesaje.Size = new System.Drawing.Size(0, 17);
+            this.lblMesaje.TabIndex = 36;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(1332, 549);
-            this.Controls.Add(this.lblMesaj);
+            this.ClientSize = new System.Drawing.Size(1305, 640);
+            this.Controls.Add(this.lblMesaje);
+            this.Controls.Add(this.buttonStergere);
+            this.Controls.Add(this.dataGridAnime);
             this.Controls.Add(this.ListaAnime);
             this.Controls.Add(this.buttonModificare);
             this.Controls.Add(this.buttonCautare);
@@ -730,7 +756,8 @@ namespace InterfataUtilizator_WindowsForms
             this.Controls.Add(this.lblNume);
             this.Controls.Add(this.buttonAdauga);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Anime";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBoxType.ResumeLayout(false);
             this.groupBoxType.PerformLayout();
@@ -738,6 +765,7 @@ namespace InterfataUtilizator_WindowsForms
             this.groupBoxStatus.PerformLayout();
             this.groupBoxGenuri.ResumeLayout(false);
             this.groupBoxGenuri.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAnime)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -800,7 +828,9 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.CheckBox checkBoxHistorical;
         private System.Windows.Forms.CheckBox checkBoxAdventure;
         private System.Windows.Forms.ListBox ListaAnime;
-        private System.Windows.Forms.Label lblMesaj;
+        private System.Windows.Forms.DataGridView dataGridAnime;
+        private System.Windows.Forms.Button buttonStergere;
+        private System.Windows.Forms.Label lblMesaje;
     }
 }
 
