@@ -18,8 +18,7 @@ namespace InterfataUtilizator_Consola
                 {
                     default:
                     case "bin":
-                        ///return new AdministrareStudenti_FisierBinar(numeFisier + "." + formatSalvare);
-                        return null;
+                        return new Administrare_Anime_BIN(numeFisier + "." + formatSalvare);
 
                     case "txt":
                         return new Administrare_Anime_TXT(numeFisier + "." + formatSalvare);

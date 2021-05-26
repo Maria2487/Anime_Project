@@ -87,6 +87,7 @@ namespace InterfataUtilizator_WindowsForms
             this.stergereaUnuiAnimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.afisareaListeiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtNume1 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBoxType.SuspendLayout();
             this.groupBoxStatus.SuspendLayout();
             this.groupBoxGenuri.SuspendLayout();
@@ -223,9 +224,9 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.groupBoxStatus.Controls.Add(this.radioButtonCompleted);
             this.groupBoxStatus.Controls.Add(this.radioButtonAiring);
-            this.groupBoxStatus.Location = new System.Drawing.Point(27, 298);
+            this.groupBoxStatus.Location = new System.Drawing.Point(27, 286);
             this.groupBoxStatus.Name = "groupBoxStatus";
-            this.groupBoxStatus.Size = new System.Drawing.Size(188, 100);
+            this.groupBoxStatus.Size = new System.Drawing.Size(188, 74);
             this.groupBoxStatus.TabIndex = 19;
             this.groupBoxStatus.TabStop = false;
             this.groupBoxStatus.Text = "Status";
@@ -233,7 +234,7 @@ namespace InterfataUtilizator_WindowsForms
             // radioButtonCompleted
             // 
             this.radioButtonCompleted.AutoSize = true;
-            this.radioButtonCompleted.Location = new System.Drawing.Point(18, 60);
+            this.radioButtonCompleted.Location = new System.Drawing.Point(18, 48);
             this.radioButtonCompleted.Name = "radioButtonCompleted";
             this.radioButtonCompleted.Size = new System.Drawing.Size(114, 21);
             this.radioButtonCompleted.TabIndex = 1;
@@ -720,12 +721,20 @@ namespace InterfataUtilizator_WindowsForms
             this.txtNume1.Size = new System.Drawing.Size(100, 22);
             this.txtNume1.TabIndex = 38;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(25, 381);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(190, 22);
+            this.dateTimePicker1.TabIndex = 39;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1406, 568);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtNume1);
             this.Controls.Add(this.lblMesaje);
             this.Controls.Add(this.ListaAnime);
@@ -817,6 +826,7 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.ToolStripMenuItem cautareaUnuiAnimeToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem stergereaUnuiAnimeToolStripMenuItem;
         private System.Windows.Forms.TextBox txtNume1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 

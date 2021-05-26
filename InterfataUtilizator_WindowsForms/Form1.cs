@@ -175,6 +175,23 @@ namespace InterfataUtilizator_WindowsForms
             int input;
             double input2;
             bool esteValid = true;
+            TypeAnime? typeAnime = GetTypeAnime();
+            if (typeAnime.HasValue == false)
+            {
+                groupBoxType.ForeColor = Color.Red;
+                esteValid = false;
+            }
+            Status? status = GetStatus();
+            if (status.HasValue == false)
+            {
+                groupBoxStatus.ForeColor = Color.Red;
+                esteValid = false;
+            }
+            if (txtNume1.Text == string.Empty)
+            {
+                lblNume1.ForeColor = Color.Red;
+                esteValid = false;
+            }
             if (genurileBifate.Count == LIMITA)
             {
                 groupBoxGenuri.ForeColor = Color.Red;
@@ -239,11 +256,17 @@ namespace InterfataUtilizator_WindowsForms
 
             if (Double.TryParse(txtRecenzie.Text, out input2))
             {
-                if (input < LIMITA && input > LIMITASUP)
+                if (input2 < LIMITA)
                 {
                     lblRecenzie.ForeColor = Color.Red;
                     txtRecenzie.Clear();
                     esteValid = false;
+                }
+                if (input2 > LIMITASUP)
+                {
+                     lblRecenzie.ForeColor = Color.Red;
+                     txtRecenzie.Clear();
+                     esteValid = false;
                 }
 
             }
@@ -259,6 +282,9 @@ namespace InterfataUtilizator_WindowsForms
                 lblEpisoade.ForeColor = Color.Black;
                 groupBoxGenuri.ForeColor = Color.Black;
                 lblRecenzie.ForeColor = Color.Black;
+                lblNume1.ForeColor = Color.Black;
+                groupBoxStatus.ForeColor = Color.Black;
+                groupBoxType.ForeColor = Color.Black;
                 return true;
             }
             else
