@@ -96,6 +96,7 @@ namespace InterfataUtilizator_WindowsForms
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cautare";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAnime)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

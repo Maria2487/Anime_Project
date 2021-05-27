@@ -81,13 +81,16 @@ namespace InterfataUtilizator_WindowsForms
             this.ListaAnime = new System.Windows.Forms.ListBox();
             this.lblMesaje = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.afisareaListeiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adaugareAnimeNouToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.modificareAnimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cautareaUnuiAnimeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.stergereaUnuiAnimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.afisareaListeiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtNume1 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.fisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deschideFisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vizualizeazaFisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxType.SuspendLayout();
             this.groupBoxStatus.SuspendLayout();
             this.groupBoxGenuri.SuspendLayout();
@@ -672,12 +675,20 @@ namespace InterfataUtilizator_WindowsForms
             this.adaugareAnimeNouToolStripMenuItem1,
             this.modificareAnimeToolStripMenuItem,
             this.cautareaUnuiAnimeToolStripMenuItem1,
-            this.stergereaUnuiAnimeToolStripMenuItem});
+            this.stergereaUnuiAnimeToolStripMenuItem,
+            this.fisierToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1406, 28);
             this.menuStrip1.TabIndex = 37;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // afisareaListeiToolStripMenuItem
+            // 
+            this.afisareaListeiToolStripMenuItem.Name = "afisareaListeiToolStripMenuItem";
+            this.afisareaListeiToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
+            this.afisareaListeiToolStripMenuItem.Text = "Afisarea listei";
+            this.afisareaListeiToolStripMenuItem.Click += new System.EventHandler(this.button2_Click);
             // 
             // adaugareAnimeNouToolStripMenuItem1
             // 
@@ -707,13 +718,6 @@ namespace InterfataUtilizator_WindowsForms
             this.stergereaUnuiAnimeToolStripMenuItem.Text = "Stergerea unui anime din lista";
             this.stergereaUnuiAnimeToolStripMenuItem.Click += new System.EventHandler(this.buttonStergere_Click);
             // 
-            // afisareaListeiToolStripMenuItem
-            // 
-            this.afisareaListeiToolStripMenuItem.Name = "afisareaListeiToolStripMenuItem";
-            this.afisareaListeiToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
-            this.afisareaListeiToolStripMenuItem.Text = "Afisarea listei";
-            this.afisareaListeiToolStripMenuItem.Click += new System.EventHandler(this.button2_Click);
-            // 
             // txtNume1
             // 
             this.txtNume1.Location = new System.Drawing.Point(115, 76);
@@ -727,6 +731,30 @@ namespace InterfataUtilizator_WindowsForms
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(190, 22);
             this.dateTimePicker1.TabIndex = 39;
+            // 
+            // fisierToolStripMenuItem
+            // 
+            this.fisierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deschideFisierToolStripMenuItem});
+            this.fisierToolStripMenuItem.Name = "fisierToolStripMenuItem";
+            this.fisierToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
+            this.fisierToolStripMenuItem.Text = "Fisier";
+            // 
+            // deschideFisierToolStripMenuItem
+            // 
+            this.deschideFisierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vizualizeazaFisierToolStripMenuItem});
+            this.deschideFisierToolStripMenuItem.Name = "deschideFisierToolStripMenuItem";
+            this.deschideFisierToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.deschideFisierToolStripMenuItem.Text = "Deschide Fisier";
+            this.deschideFisierToolStripMenuItem.Click += new System.EventHandler(this.deschideFisierToolStripMenuItem_Click);
+            // 
+            // vizualizeazaFisierToolStripMenuItem
+            // 
+            this.vizualizeazaFisierToolStripMenuItem.Name = "vizualizeazaFisierToolStripMenuItem";
+            this.vizualizeazaFisierToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.vizualizeazaFisierToolStripMenuItem.Text = "Vizualizeaza fisier";
+            this.vizualizeazaFisierToolStripMenuItem.Click += new System.EventHandler(this.vizualizeazaFisierToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -827,6 +855,9 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.ToolStripMenuItem stergereaUnuiAnimeToolStripMenuItem;
         private System.Windows.Forms.TextBox txtNume1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ToolStripMenuItem fisierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deschideFisierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vizualizeazaFisierToolStripMenuItem;
     }
 }
 

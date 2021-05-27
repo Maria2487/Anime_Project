@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Anime_Project;
 using NivelAccesDate;
+using System.IO;
 
 namespace InterfataUtilizator_WindowsForms
 {
@@ -19,6 +20,7 @@ namespace InterfataUtilizator_WindowsForms
         private const int LIMITASUP = 10;
         IStocareDate adminAnime;
         List<string> genurileBifate = new List<string>();
+        public string TextArea { get; set; }
         public Form1()
         {
             InitializeComponent();
@@ -400,6 +402,42 @@ namespace InterfataUtilizator_WindowsForms
 
             show();
             ResetareControale();
+        }
+
+        private void deschideFisierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var fileContent = string.Empty;
+            var filePath = string.Empty;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.InitialDirectory = "d:\\";
+            openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog.FilterIndex = 2;
+            openFileDialog.RestoreDirectory = true;
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                //Get the path of specified file
+                filePath = openFileDialog.FileName;
+
+                //Read the contents of the file into a stream
+                var fileStream = openFileDialog.OpenFile();
+
+                using (StreamReader reader = new StreamReader(fileStream))
+                {
+                    TextArea = reader.ReadToEnd();
+                    reader.Close();
+                    
+                }
+                
+            }
+        }
+
+        private void vizualizeazaFisierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowContent fr2 = new ShowContent(TextArea);
+            fr2.Show();
+            this.Hide();
         }
     }
 }

@@ -52,5 +52,10 @@ namespace InterfataUtilizator_WindowsForms
             fr1.Show();
             this.Close();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
