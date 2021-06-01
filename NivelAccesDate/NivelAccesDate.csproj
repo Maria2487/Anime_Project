@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrare_Anime_BIN.cs" />
     <Compile Include="Administrare_Anime_TXT.cs" />
     <Compile Include="IStocareDate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
