@@ -30,10 +30,10 @@ namespace InterfataUtilizator_WindowsForms
         private void InitializeComponent()
         {
             this.panelTop = new System.Windows.Forms.Panel();
+            this.buttonReturn = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelRight = new System.Windows.Forms.Panel();
-            this.panelLeft = new System.Windows.Forms.Panel();
-            this.buttonModificare = new System.Windows.Forms.Button();
             this.ListaAnime = new System.Windows.Forms.ListBox();
             this.txtNume1 = new System.Windows.Forms.TextBox();
             this.groupBoxGenuri = new System.Windows.Forms.GroupBox();
@@ -85,20 +85,23 @@ namespace InterfataUtilizator_WindowsForms
             this.lblEpisoade = new System.Windows.Forms.Label();
             this.lblSezoane = new System.Windows.Forms.Label();
             this.lblNume1 = new System.Windows.Forms.Label();
-            this.buttonReturn = new System.Windows.Forms.Button();
-            this.buttonExit = new System.Windows.Forms.Button();
+            this.panelLeft = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.buttonModificare = new System.Windows.Forms.Button();
+            this.buttonCauta = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelTop.SuspendLayout();
             this.panelRight.SuspendLayout();
-            this.panelLeft.SuspendLayout();
             this.groupBoxGenuri.SuspendLayout();
             this.groupBoxStatus.SuspendLayout();
             this.groupBoxType.SuspendLayout();
+            this.panelLeft.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(39)))), ((int)(((byte)(210)))));
+            this.panelTop.Controls.Add(this.label2);
             this.panelTop.Controls.Add(this.buttonReturn);
             this.panelTop.Controls.Add(this.buttonExit);
             this.panelTop.Controls.Add(this.label1);
@@ -107,6 +110,34 @@ namespace InterfataUtilizator_WindowsForms
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(1309, 94);
             this.panelTop.TabIndex = 0;
+            // 
+            // buttonReturn
+            // 
+            this.buttonReturn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonReturn.FlatAppearance.BorderSize = 0;
+            this.buttonReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReturn.Font = new System.Drawing.Font("Wingdings 3", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.buttonReturn.Location = new System.Drawing.Point(1159, 0);
+            this.buttonReturn.Name = "buttonReturn";
+            this.buttonReturn.Size = new System.Drawing.Size(75, 94);
+            this.buttonReturn.TabIndex = 4;
+            this.buttonReturn.Text = "O";
+            this.buttonReturn.UseVisualStyleBackColor = true;
+            this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonExit.FlatAppearance.BorderSize = 0;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Font = new System.Drawing.Font("Webdings", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.buttonExit.Location = new System.Drawing.Point(1234, 0);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 94);
+            this.buttonExit.TabIndex = 3;
+            this.buttonExit.Text = "r";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // label1
             // 
@@ -140,40 +171,16 @@ namespace InterfataUtilizator_WindowsForms
             this.panelRight.Size = new System.Drawing.Size(1309, 544);
             this.panelRight.TabIndex = 2;
             // 
-            // panelLeft
-            // 
-            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(92)))), ((int)(((byte)(243)))));
-            this.panelLeft.Controls.Add(this.button1);
-            this.panelLeft.Controls.Add(this.buttonModificare);
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(200, 544);
-            this.panelLeft.TabIndex = 0;
-            // 
-            // buttonModificare
-            // 
-            this.buttonModificare.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonModificare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModificare.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModificare.Location = new System.Drawing.Point(0, 0);
-            this.buttonModificare.Name = "buttonModificare";
-            this.buttonModificare.Size = new System.Drawing.Size(200, 77);
-            this.buttonModificare.TabIndex = 3;
-            this.buttonModificare.Text = "Salveaza modificarile";
-            this.buttonModificare.UseVisualStyleBackColor = true;
-            this.buttonModificare.Click += new System.EventHandler(this.buttonModificare_Click);
-            // 
             // ListaAnime
             // 
             this.ListaAnime.BackColor = System.Drawing.Color.BlueViolet;
-            this.ListaAnime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListaAnime.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListaAnime.FormattingEnabled = true;
             this.ListaAnime.HorizontalScrollbar = true;
-            this.ListaAnime.ItemHeight = 20;
-            this.ListaAnime.Location = new System.Drawing.Point(731, 40);
+            this.ListaAnime.ItemHeight = 29;
+            this.ListaAnime.Location = new System.Drawing.Point(737, 56);
             this.ListaAnime.Name = "ListaAnime";
-            this.ListaAnime.Size = new System.Drawing.Size(560, 464);
+            this.ListaAnime.Size = new System.Drawing.Size(560, 439);
             this.ListaAnime.TabIndex = 65;
             this.ListaAnime.SelectedIndexChanged += new System.EventHandler(this.ListaAnime_SelectedIndexChanged);
             // 
@@ -747,33 +754,17 @@ namespace InterfataUtilizator_WindowsForms
             this.lblNume1.TabIndex = 53;
             this.lblNume1.Text = "NAME";
             // 
-            // buttonReturn
+            // panelLeft
             // 
-            this.buttonReturn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonReturn.FlatAppearance.BorderSize = 0;
-            this.buttonReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonReturn.Font = new System.Drawing.Font("Wingdings 3", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.buttonReturn.Location = new System.Drawing.Point(1159, 0);
-            this.buttonReturn.Name = "buttonReturn";
-            this.buttonReturn.Size = new System.Drawing.Size(75, 94);
-            this.buttonReturn.TabIndex = 4;
-            this.buttonReturn.Text = "O";
-            this.buttonReturn.UseVisualStyleBackColor = true;
-            this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonExit.FlatAppearance.BorderSize = 0;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Font = new System.Drawing.Font("Webdings", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.buttonExit.Location = new System.Drawing.Point(1234, 0);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(75, 94);
-            this.buttonExit.TabIndex = 3;
-            this.buttonExit.Text = "r";
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(92)))), ((int)(((byte)(243)))));
+            this.panelLeft.Controls.Add(this.buttonCauta);
+            this.panelLeft.Controls.Add(this.button1);
+            this.panelLeft.Controls.Add(this.buttonModificare);
+            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(200, 544);
+            this.panelLeft.TabIndex = 0;
             // 
             // button1
             // 
@@ -787,6 +778,42 @@ namespace InterfataUtilizator_WindowsForms
             this.button1.Text = "Reseteaza controalele";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonModificare
+            // 
+            this.buttonModificare.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonModificare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModificare.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModificare.Location = new System.Drawing.Point(0, 0);
+            this.buttonModificare.Name = "buttonModificare";
+            this.buttonModificare.Size = new System.Drawing.Size(200, 77);
+            this.buttonModificare.TabIndex = 3;
+            this.buttonModificare.Text = "Salveaza modificarile";
+            this.buttonModificare.UseVisualStyleBackColor = true;
+            this.buttonModificare.Click += new System.EventHandler(this.buttonModificare_Click);
+            // 
+            // buttonCauta
+            // 
+            this.buttonCauta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCauta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCauta.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCauta.Location = new System.Drawing.Point(0, 154);
+            this.buttonCauta.Name = "buttonCauta";
+            this.buttonCauta.Size = new System.Drawing.Size(200, 77);
+            this.buttonCauta.TabIndex = 5;
+            this.buttonCauta.Text = "Cauta animeul (caseta NAME)";
+            this.buttonCauta.UseVisualStyleBackColor = true;
+            this.buttonCauta.Click += new System.EventHandler(this.buttonCauta_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(430, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 36);
+            this.label2.TabIndex = 6;
+            this.label2.Visible = false;
             // 
             // ModificareForm
             // 
@@ -805,13 +832,13 @@ namespace InterfataUtilizator_WindowsForms
             this.panelTop.PerformLayout();
             this.panelRight.ResumeLayout(false);
             this.panelRight.PerformLayout();
-            this.panelLeft.ResumeLayout(false);
             this.groupBoxGenuri.ResumeLayout(false);
             this.groupBoxGenuri.PerformLayout();
             this.groupBoxStatus.ResumeLayout(false);
             this.groupBoxStatus.PerformLayout();
             this.groupBoxType.ResumeLayout(false);
             this.groupBoxType.PerformLayout();
+            this.panelLeft.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -877,5 +904,7 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.Button buttonReturn;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonCauta;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -19,7 +19,6 @@ namespace InterfataUtilizator_WindowsForms
         private const int LIMITASUP = 10;
         IStocareDate adminAnime;
         List<string> genurileBifate = new List<string>();
-        public string TextArea { get; set; }
         public AdaugareForm()
         {
             InitializeComponent();
@@ -70,6 +69,9 @@ namespace InterfataUtilizator_WindowsForms
 
             if (DateValide() == false)
             {
+                label2.Visible = true;
+                label2.ForeColor = Color.DeepSkyBlue;
+                label2.Text = "Animeul nu a putut fi adaugat";
                 return;
             }
 
@@ -88,17 +90,33 @@ namespace InterfataUtilizator_WindowsForms
 
             anime1.GenAnime = new List<string>();
             anime1.GenAnime.AddRange(genurileBifate);
-            //lblMesajAdaugare.Visible = true;
-            //lblMesajAdaugare.Text = "Animeul:  " + anime1.ConvertToStringAfisare() + "A fost adaugat";
             adminAnime.AddAnime(anime1);
-
+            if (adminAnime.GetAnime(anime1.NumeAnime) == null)
+            {
+                label2.Visible = true;
+                label2.ForeColor = Color.DeepSkyBlue;
+                label2.Text = "Animeul nu a putut fi adaugat";
+            }
+            else
+            {
+                label2.Visible = true;
+                label2.ForeColor = Color.DeepSkyBlue;
+                label2.Text = "Animeul a fost adaugat";
+            }
             ResetareControale();
             show();
         }
         private void show()
         {
             ListaAnime.Items.Clear();
-            ListaAnime.Items.Add("Lista Animeuri:");
+            ListaAnime.Items.Add("Lista Animeuri");
+            List<Anime> verif = new List<Anime>();
+            verif = adminAnime.GetAnimeuri();
+            if (verif.Count == 0)
+            {
+                ListaAnime.Items.Clear();
+                ListaAnime.Items.Add("Nu exista animeuri in lista");
+            }
             foreach (Anime a in adminAnime.GetAnimeuri())
             {
                 ListaAnime.Items.Add(a.ConvertToStringAfisare());
@@ -157,6 +175,10 @@ namespace InterfataUtilizator_WindowsForms
             int input;
             double input2;
             bool esteValid = true;
+            if (ListaAnime.SelectedIndex == 0)
+            {
+                return false;
+            }
             TypeAnime? typeAnime = GetTypeAnime();
             if (typeAnime.HasValue == false)
             {
@@ -295,11 +317,13 @@ namespace InterfataUtilizator_WindowsForms
 
         private void buttonReturn_Click(object sender, EventArgs e)
         {
+            label2.Visible = false;
             this.Close();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
+            label2.Visible = false;
             Environment.Exit(1);
         }
 

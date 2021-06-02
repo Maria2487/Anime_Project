@@ -15,15 +15,10 @@ namespace InterfataUtilizator_WindowsForms
 {
     public partial class FisierForm : Form
     {
-        private const int LIMITA = 0;
-        private const int LIMITASUP = 10;
-        IStocareDate adminAnime;
-        List<string> genurileBifate = new List<string>();
         public string TextArea { get; set; }
         public FisierForm(string ceva)
         {
             InitializeComponent();
-            adminAnime = StocareFactory.GetAdministratorStocare();
             TextArea = ceva;
         }
 
@@ -40,16 +35,30 @@ namespace InterfataUtilizator_WindowsForms
                 animeuri.Add(a);
             }
             dataGridAnime.DataSource = animeuri;
-           
+            if (animeuri.Count == 0)
+            {
+                label2.Visible = true;
+                label2.ForeColor = Color.DeepSkyBlue;
+                label2.Text = "Fisiernul este gol";
+            }
+            else
+            {
+                label2.Visible = true;
+                label2.ForeColor = Color.DeepSkyBlue;
+                label2.Text = "Fisierul a fost afisat";
+            }
+
         }
 
         private void buttonReturn_Click(object sender, EventArgs e)
         {
+            label2.Visible = false;
             this.Close();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
+            label2.Visible = false;
             Environment.Exit(1);
         }
     }

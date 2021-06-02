@@ -30,13 +30,13 @@ namespace InterfataUtilizator_WindowsForms
         private void InitializeComponent()
         {
             this.panelTop = new System.Windows.Forms.Panel();
+            this.buttonReturn = new System.Windows.Forms.Button();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelRight = new System.Windows.Forms.Panel();
             this.ListaAnime = new System.Windows.Forms.ListBox();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.buttonAfisare = new System.Windows.Forms.Button();
-            this.buttonReturn = new System.Windows.Forms.Button();
-            this.buttonExit = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             this.panelRight.SuspendLayout();
             this.panelLeft.SuspendLayout();
@@ -53,63 +53,6 @@ namespace InterfataUtilizator_WindowsForms
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(1309, 94);
             this.panelTop.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Viner Hand ITC", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 69);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Anime";
-            // 
-            // panelRight
-            // 
-            this.panelRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(26)))), ((int)(((byte)(150)))));
-            this.panelRight.Controls.Add(this.ListaAnime);
-            this.panelRight.Controls.Add(this.panelLeft);
-            this.panelRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelRight.Location = new System.Drawing.Point(0, 94);
-            this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(1309, 544);
-            this.panelRight.TabIndex = 2;
-            // 
-            // ListaAnime
-            // 
-            this.ListaAnime.BackColor = System.Drawing.Color.BlueViolet;
-            this.ListaAnime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListaAnime.FormattingEnabled = true;
-            this.ListaAnime.HorizontalScrollbar = true;
-            this.ListaAnime.ItemHeight = 20;
-            this.ListaAnime.Location = new System.Drawing.Point(236, 32);
-            this.ListaAnime.Name = "ListaAnime";
-            this.ListaAnime.Size = new System.Drawing.Size(1040, 484);
-            this.ListaAnime.TabIndex = 53;
-            // 
-            // panelLeft
-            // 
-            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(92)))), ((int)(((byte)(243)))));
-            this.panelLeft.Controls.Add(this.buttonAfisare);
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(200, 544);
-            this.panelLeft.TabIndex = 0;
-            // 
-            // buttonAfisare
-            // 
-            this.buttonAfisare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(92)))), ((int)(((byte)(243)))));
-            this.buttonAfisare.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonAfisare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAfisare.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAfisare.Location = new System.Drawing.Point(0, 0);
-            this.buttonAfisare.Name = "buttonAfisare";
-            this.buttonAfisare.Size = new System.Drawing.Size(200, 77);
-            this.buttonAfisare.TabIndex = 0;
-            this.buttonAfisare.Text = "Vizualizare";
-            this.buttonAfisare.UseVisualStyleBackColor = false;
-            this.buttonAfisare.Click += new System.EventHandler(this.buttonAfisare_Click);
             // 
             // buttonReturn
             // 
@@ -138,6 +81,63 @@ namespace InterfataUtilizator_WindowsForms
             this.buttonExit.Text = "r";
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Viner Hand ITC", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(163, 69);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Anime";
+            // 
+            // panelRight
+            // 
+            this.panelRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(26)))), ((int)(((byte)(150)))));
+            this.panelRight.Controls.Add(this.ListaAnime);
+            this.panelRight.Controls.Add(this.panelLeft);
+            this.panelRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelRight.Location = new System.Drawing.Point(0, 94);
+            this.panelRight.Name = "panelRight";
+            this.panelRight.Size = new System.Drawing.Size(1309, 544);
+            this.panelRight.TabIndex = 2;
+            // 
+            // ListaAnime
+            // 
+            this.ListaAnime.BackColor = System.Drawing.Color.BlueViolet;
+            this.ListaAnime.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListaAnime.FormattingEnabled = true;
+            this.ListaAnime.HorizontalScrollbar = true;
+            this.ListaAnime.ItemHeight = 29;
+            this.ListaAnime.Location = new System.Drawing.Point(236, 32);
+            this.ListaAnime.Name = "ListaAnime";
+            this.ListaAnime.Size = new System.Drawing.Size(1040, 468);
+            this.ListaAnime.TabIndex = 53;
+            // 
+            // panelLeft
+            // 
+            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(92)))), ((int)(((byte)(243)))));
+            this.panelLeft.Controls.Add(this.buttonAfisare);
+            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(200, 544);
+            this.panelLeft.TabIndex = 0;
+            // 
+            // buttonAfisare
+            // 
+            this.buttonAfisare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(92)))), ((int)(((byte)(243)))));
+            this.buttonAfisare.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAfisare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAfisare.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAfisare.Location = new System.Drawing.Point(0, 0);
+            this.buttonAfisare.Name = "buttonAfisare";
+            this.buttonAfisare.Size = new System.Drawing.Size(200, 77);
+            this.buttonAfisare.TabIndex = 0;
+            this.buttonAfisare.Text = "Vizualizare lista";
+            this.buttonAfisare.UseVisualStyleBackColor = false;
+            this.buttonAfisare.Click += new System.EventHandler(this.buttonAfisare_Click);
             // 
             // AfisareForm
             // 

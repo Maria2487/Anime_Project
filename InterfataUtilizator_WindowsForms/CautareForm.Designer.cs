@@ -113,13 +113,13 @@ namespace InterfataUtilizator_WindowsForms
             // ListaAnime
             // 
             this.ListaAnime.BackColor = System.Drawing.Color.BlueViolet;
-            this.ListaAnime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListaAnime.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListaAnime.FormattingEnabled = true;
             this.ListaAnime.HorizontalScrollbar = true;
-            this.ListaAnime.ItemHeight = 20;
+            this.ListaAnime.ItemHeight = 29;
             this.ListaAnime.Location = new System.Drawing.Point(224, 21);
             this.ListaAnime.Name = "ListaAnime";
-            this.ListaAnime.Size = new System.Drawing.Size(1061, 124);
+            this.ListaAnime.Size = new System.Drawing.Size(1061, 120);
             this.ListaAnime.TabIndex = 66;
             // 
             // dataGridAnime
@@ -154,9 +154,9 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.buttonCauta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCauta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCauta.Location = new System.Drawing.Point(673, 268);
+            this.buttonCauta.Location = new System.Drawing.Point(670, 268);
             this.buttonCauta.Name = "buttonCauta";
-            this.buttonCauta.Size = new System.Drawing.Size(182, 30);
+            this.buttonCauta.Size = new System.Drawing.Size(182, 47);
             this.buttonCauta.TabIndex = 5;
             this.buttonCauta.Text = "Cauta animele";
             this.buttonCauta.UseVisualStyleBackColor = true;

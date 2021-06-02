@@ -15,11 +15,7 @@ namespace InterfataUtilizator_WindowsForms
 {
     public partial class AfisareForm : Form
     {
-        private const int LIMITA = 0;
-        private const int LIMITASUP = 10;
         IStocareDate adminAnime;
-        List<string> genurileBifate = new List<string>();
-        public string TextArea { get; set; }
         public AfisareForm()
         {
             InitializeComponent();
@@ -35,6 +31,13 @@ namespace InterfataUtilizator_WindowsForms
         {
             ListaAnime.Items.Clear();
             ListaAnime.Items.Add("Lista Animeuri");
+            List < Anime > verif = new List<Anime>();
+            verif = adminAnime.GetAnimeuri();
+            if(verif.Count == 0)
+            {
+                ListaAnime.Items.Clear();
+                ListaAnime.Items.Add("Nu exista animeuri in lista");
+            }
             foreach (Anime a in adminAnime.GetAnimeuri())
             {
                 ListaAnime.Items.Add(a.ConvertToStringAfisare());

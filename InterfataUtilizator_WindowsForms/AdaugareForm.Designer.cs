@@ -87,6 +87,7 @@ namespace InterfataUtilizator_WindowsForms
             this.lblNume1 = new System.Windows.Forms.Label();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.buttonAdaugare = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelTop.SuspendLayout();
             this.panelRight.SuspendLayout();
             this.groupBoxGenuri.SuspendLayout();
@@ -98,6 +99,7 @@ namespace InterfataUtilizator_WindowsForms
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(39)))), ((int)(((byte)(210)))));
+            this.panelTop.Controls.Add(this.label2);
             this.panelTop.Controls.Add(this.buttonReturn);
             this.panelTop.Controls.Add(this.buttonExit);
             this.panelTop.Controls.Add(this.label1);
@@ -170,13 +172,13 @@ namespace InterfataUtilizator_WindowsForms
             // ListaAnime
             // 
             this.ListaAnime.BackColor = System.Drawing.Color.BlueViolet;
-            this.ListaAnime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListaAnime.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListaAnime.FormattingEnabled = true;
             this.ListaAnime.HorizontalScrollbar = true;
-            this.ListaAnime.ItemHeight = 20;
-            this.ListaAnime.Location = new System.Drawing.Point(737, 36);
+            this.ListaAnime.ItemHeight = 29;
+            this.ListaAnime.Location = new System.Drawing.Point(737, 47);
             this.ListaAnime.Name = "ListaAnime";
-            this.ListaAnime.Size = new System.Drawing.Size(560, 464);
+            this.ListaAnime.Size = new System.Drawing.Size(560, 439);
             this.ListaAnime.TabIndex = 52;
             // 
             // txtNume1
@@ -773,6 +775,16 @@ namespace InterfataUtilizator_WindowsForms
             this.buttonAdaugare.UseVisualStyleBackColor = false;
             this.buttonAdaugare.Click += new System.EventHandler(this.buttonAdaugare_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(436, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 36);
+            this.label2.TabIndex = 5;
+            this.label2.Visible = false;
+            // 
             // AdaugareForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -861,5 +873,6 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.ListBox ListaAnime;
         private System.Windows.Forms.Button buttonReturn;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Label label2;
     }
 }

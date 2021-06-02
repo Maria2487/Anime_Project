@@ -19,7 +19,6 @@ namespace InterfataUtilizator_WindowsForms
         private const int LIMITASUP = 10;
         IStocareDate adminAnime;
         List<string> genurileBifate = new List<string>();
-        public string TextArea { get; set; }
         public ModificareForm()
         {
             InitializeComponent();
@@ -69,7 +68,14 @@ namespace InterfataUtilizator_WindowsForms
         private void show()
         {
             ListaAnime.Items.Clear();
-            ListaAnime.Items.Add("Lista Animeuri:");
+            ListaAnime.Items.Add("Lista Animeuri");
+            List<Anime> verif = new List<Anime>();
+            verif = adminAnime.GetAnimeuri();
+            if (verif.Count == 0)
+            {
+                ListaAnime.Items.Clear();
+                ListaAnime.Items.Add("Nu exista animeuri in lista");
+            }
             foreach (Anime a in adminAnime.GetAnimeuri())
             {
                 ListaAnime.Items.Add(a.ConvertToStringAfisare());
@@ -121,13 +127,16 @@ namespace InterfataUtilizator_WindowsForms
 
             genurileBifate.Clear();
             ListaAnime.Text = string.Empty;
-            //lblMesaje.Text = string.Empty;
         }
         private bool DateValide()
         {
             int input;
             double input2;
             bool esteValid = true;
+            if(ListaAnime.SelectedIndex == 0)
+            {
+                return false;
+            }
             TypeAnime? typeAnime = GetTypeAnime();
             if (typeAnime.HasValue == false)
             {
@@ -207,7 +216,6 @@ namespace InterfataUtilizator_WindowsForms
                     if (input3 <= LIMITA)
                     {
                         lblEpisoade.ForeColor = Color.Red;
-                        txtEpisoade.Clear();
                         esteValid = false;
                     }
                     else
@@ -309,11 +317,17 @@ namespace InterfataUtilizator_WindowsForms
 
         private void buttonModificare_Click(object sender, EventArgs e)
         {
-            
+            if (ListaAnime.SelectedIndex == -1)
+            {
+                return;
+            }
             Anime a = adminAnime.GetAnime(ListaAnime.SelectedIndex);
 
             if (DateValide() == false)
             {
+                label2.Visible = true;
+                label2.ForeColor = Color.DeepSkyBlue;
+                label2.Text = "Animeul nu a putut fi modificat";
                 return;
             }
 
@@ -336,7 +350,18 @@ namespace InterfataUtilizator_WindowsForms
 
             a.GenAnime = new List<string>();
             a.GenAnime.AddRange(genurileBifate);
-            adminAnime.RewriteAnime(a);
+            if (adminAnime.RewriteAnime(a) == false)
+            {
+                label2.Visible = true;
+                label2.ForeColor = Color.DeepSkyBlue;
+                label2.Text = "Animeul nu a putut fi modificat";
+            }
+            else
+            {
+                label2.Visible = true;
+                label2.ForeColor = Color.DeepSkyBlue;
+                label2.Text = "Animeul selectat a fost modificat";
+            }
 
             show();
             ResetareControale();
@@ -344,17 +369,44 @@ namespace InterfataUtilizator_WindowsForms
 
         private void buttonReturn_Click(object sender, EventArgs e)
         {
+            label2.Visible = false;
             this.Close();
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
+            label2.Visible = false;
             Environment.Exit(1);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            label2.Visible = false;
             ResetareControale();
+            show();
+        }
+
+        private void buttonCauta_Click(object sender, EventArgs e)
+        {
+            label2.Visible = false;
+            if (ListaAnime.SelectedIndex == 0)
+                return;
+            ListaAnime.Items.Clear();
+            ListaAnime.Items.Add("Introduceti numele animeului cautat in caseta `Nume`:");
+           
+            Anime a = adminAnime.GetAnime(txtNume1.Text);
+            if (a == null)
+            {
+                ListaAnime.Items.Clear();
+                ListaAnime.Items.Add("Animeul nu a fost gasit.");
+                
+            }
+            else
+            {
+                ListaAnime.Items.Clear();
+                ListaAnime.Items.Add("Animeul a fost gasit");
+                ListaAnime.Items.Add(a.ConvertToStringAfisare());
+            }
         }
     }
 }

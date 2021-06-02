@@ -215,13 +215,15 @@ namespace NivelAccesDate
                         if (animeFisier.IdAnime == animeUpdate.IdAnime)
                         {
                             i--;
+                            actualizareCuSucces = true;
                             continue;
+
                         }
                         animeFisier.IdAnime = i;
                         
                         swFisierText.WriteLine(animeFisier.ConvertToStringFisier());
                     }
-                    actualizareCuSucces = true;
+                    
                 }
             }
             catch (IOException eIO)

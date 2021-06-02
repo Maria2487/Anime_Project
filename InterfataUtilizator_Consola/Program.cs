@@ -57,65 +57,65 @@ namespace InterfataUtilizator_Consola
         //                else
         //                {
         //                    Console.WriteLine($"Am gasit studentul {animeUpdate.ConvertToStringFisier()}");
-        //                    //while (true)
-        //                    //{
-        //                    //    Console.Clear();
-        //                    //    Console.WriteLine(animeUpdate);
-        //                    //    Console.WriteLine("Ce doriti sa modificati?\n ");
-        //                    //    Console.WriteLine("1 - Numarul de episoade\n");
-        //                    //    Console.WriteLine("2 - Numarul de sezoane\n");
-        //                    //    Console.WriteLine("3 - Starea animeului\n");
-        //                    //    Console.WriteLine("4 - Recenzia animeului\n");
-        //                    //    Console.WriteLine("X - Pentru a incheia aceata activitate\n\n");
+        //                    while (true)
+        //                    {
+        //                        Console.Clear();
+        //                        Console.WriteLine(animeUpdate);
+        //                        Console.WriteLine("Ce doriti sa modificati?\n ");
+        //                        Console.WriteLine("1 - Numarul de episoade\n");
+        //                        Console.WriteLine("2 - Numarul de sezoane\n");
+        //                        Console.WriteLine("3 - Starea animeului\n");
+        //                        Console.WriteLine("4 - Recenzia animeului\n");
+        //                        Console.WriteLine("X - Pentru a incheia aceata activitate\n\n");
 
-        //                    //    var key = Console.ReadKey(true).Key;
-        //                    //    switch (key)
-        //                    //    {
-        //                    //        case ConsoleKey.D1:
-        //                    //            Console.Write("Introduceti numarul de episoade: ");
-        //                    //            if (int.TryParse(Console.ReadLine(), out intParseInput))
-        //                    //                listaAnime[i].EpisoadeAnime = intParseInput;
-        //                    //            else
-        //                    //                Console.WriteLine("Introducere incorecta");
-        //                    //            break;
+        //                        var key = Console.ReadKey(true).Key;
+        //                        switch (key)
+        //                        {
+        //                            case ConsoleKey.D1:
+        //                                Console.Write("Introduceti numarul de episoade: ");
+        //                                if (int.TryParse(Console.ReadLine(), out intParseInput))
+        //                                    listaAnime[i].EpisoadeAnime = intParseInput;
+        //                                else
+        //                                    Console.WriteLine("Introducere incorecta");
+        //                                break;
 
-        //                    //        case ConsoleKey.D2:
-        //                    //            Console.Write("Introduceti numarul de sezoane: ");
-        //                    //            if (int.TryParse(Console.ReadLine(), out intParseInput))
-        //                    //                listaAnime[i].SezoaneAnime = intParseInput;
-        //                    //            else
-        //                    //                Console.WriteLine("Introducere incorecta");
-        //                    //            break;
+        //                            case ConsoleKey.D2:
+        //                                Console.Write("Introduceti numarul de sezoane: ");
+        //                                if (int.TryParse(Console.ReadLine(), out intParseInput))
+        //                                    listaAnime[i].SezoaneAnime = intParseInput;
+        //                                else
+        //                                    Console.WriteLine("Introducere incorecta");
+        //                                break;
 
-        //                    //        case ConsoleKey.D3:
-        //                    //            Console.WriteLine("Introduceti starea animeului: ");
-        //                    //            listaAnime[i].OngoingAnime = Console.ReadLine().ToUpper().Trim();
-        //                    //            break;
+        //                            case ConsoleKey.D3:
+        //                                Console.WriteLine("Introduceti starea animeului: ");
+        //                                listaAnime[i].OngoingAnime = Console.ReadLine().ToUpper().Trim();
+        //                                break;
 
-        //                    //        case ConsoleKey.D4:
-        //                    //            Console.Write("Introduceti nota: ");
-        //                    //            if (double.TryParse(Console.ReadLine(), out doubleParseInput))
-        //                    //                listaAnime[i].NotaAnime = doubleParseInput;
-        //                    //            else
-        //                    //                Console.WriteLine("Introducere incorecta");
+        //                            case ConsoleKey.D4:
+        //                                Console.Write("Introduceti nota: ");
+        //                                if (double.TryParse(Console.ReadLine(), out doubleParseInput))
+        //                                    listaAnime[i].NotaAnime = doubleParseInput;
+        //                                else
+        //                                    Console.WriteLine("Introducere incorecta");
 
-        //                    //                break;
+        //                                break;
 
-        //                    //            case ConsoleKey.X:
-        //                    //                return listaAnime;
+        //                            case ConsoleKey.X:
+        //                                return listaAnime;
 
-        //                    //            default:
-        //                    //                break;
-        //                    //        }
-        //                    //    }
+        //                            default:
+        //                                break;
+        //                        }
+        //                    }
 
-        //                    //    bool updateResult = adminStudenti.UpdateStudent(studentPentruModificare);
-        //                    //    if (updateResult == true)
-        //                    //    {
-        //                    //        studenti = adminStudenti.GetStudenti();
-        //                    //    }
-        //                    //}
-        //                    Console.WriteLine("TERMIN SWITCH PENTRU CE DORESTI SA MODIFICI");
+        //                    bool updateResult = adminStudenti.UpdateStudent(studentPentruModificare);
+        //                    if (updateResult == true)
+        //                    {
+        //                        studenti = adminStudenti.GetStudenti();
+        //                    }
+        //                }
+        //                Console.WriteLine("TERMIN SWITCH PENTRU CE DORESTI SA MODIFICI");
         //                }
         //                break;
         //            case ConsoleKey.X:
@@ -142,18 +142,6 @@ namespace InterfataUtilizator_Consola
 
         //    Console.WriteLine("Introduceti numarul de episoade/sezon: ");
         //    string episoade = Console.ReadLine().ToUpper().Trim();
-        //    ///////////////////////////////////////////////////////////////////////////
-        //    //Console.WriteLine("Alegeti genurile animeului: (Separate prin virgula)");
-        //    //Console.WriteLine(" Action = 1, Adventure = 2, Comedy = 3,Demons = 4,Drama = 5, Ecchi = 6, Fantasy = 7, Game = 8, Harem = 9, Historical = 10, Horror = 11, Josei = 12,\n" +
-        //    //                   "Magic = 13, Martial = 14, Mecha = 15,  Military = 16, Music = 17, Mystery = 18, Psychological = 19, Romance = 20, Samurai = 21, Seinen = 22, Shoujo = 23,\n" +
-        //    //                   "ShoujoAi = 24, Shounen = 25, ShounenAi = 26, SliceOfLife = 27, Sports = 28, Supernatural = 29, Thriller = 30, Yaoi = 31, Yuri = 32\n");
-        //    //string op = Console.ReadLine().ToUpper();
-        //    //string[] formatOp = op.Split(',');
-        //    //for (int i = 0; i < formatOp.Length; i++)
-        //    //    formatOp[i] = formatOp[i].Trim();
-
-        //    //op = string.Empty;
-        //    //op = string.Join(",", formatOp);
 
         //    Console.WriteLine("Introduceti starea animeului (complet sau airing): ");
         //    string ongoing = Console.ReadLine().ToUpper().Trim();
@@ -166,12 +154,6 @@ namespace InterfataUtilizator_Consola
         //    a.SezoaneAnime = int.Parse(sezoane);
         //    a.EpisoadeAnime = int.Parse(episoade);
 
-        //    //if (op != string.Empty)
-        //    //    a.GenAnime = op;
-        //    //else
-        //    //    a.GenAnime = "NESPECIFICAT";
-        //    //////////////////////////////////////////////////////////
-        //   // a.OngoingAnime = ongoing;
         //    a.NotaAnime = Double.Parse(nota);
 
         //    return a;
